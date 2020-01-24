@@ -51,6 +51,10 @@ section .container,
     flex-direction: column;
 }
 
+#Generate_HTML.card-body {
+    flex-direction: row;
+}
+
 .fixed-width {
     max-width: 500px;
     margin: auto;
