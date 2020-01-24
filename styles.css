@@ -1,0 +1,305 @@
+html,
+body {
+    background-color: #141516;
+    color: #EEEEEE;
+}
+
+.txt-muted {
+    color: #808e99;
+}
+
+a {
+    color: #FF8400;
+}
+
+a:hover {
+    color: #E46C00;
+    text-decoration: none;
+}
+
+section,
+.section {
+    display: block;
+}
+
+section .container,
+.section .container {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+
+/* === List Group === */
+
+.list-group,
+.form-control {
+    min-width: 400px;
+    max-width: 600px;
+    margin: auto;
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+.list-group {
+    padding: 10px;
+    ;
+}
+
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.fixed-width {
+    max-width: 500px;
+    margin: auto;
+}
+
+/* .list-group-item {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-color: #313131;
+    padding: 0;
+    display: flex;
+}
+
+.list-group-item>*:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.list-group-item>* {
+    padding: 0.5rem 0.75rem;
+    flex: 1 100%;
+    position: relative;
+}
+
+.list-group-left {
+    display: flex;
+    border-right: 1px solid #313131;
+}
+
+.list-group-left:hover {
+    color: #FF8400;
+    text-decoration: none;
+}
+
+.list-group-right {
+    display: flex;
+    flex: 2 0px;
+} */
+
+
+.list-group-item:first-child {
+    border-top-left-radius: .25rem;
+    border-top-right-radius: .25rem;
+}
+
+.list-group-item {
+    transition: .2s;
+    background-color: rgba(0, 0, 0, .2);
+    border-color: #313131;
+    position: relative;
+    display: block;
+    padding: .5rem .75rem;
+    margin-bottom: -1px;
+    border: 1px solid rgba(0, 0, 0, .125);
+}
+
+.list-group-item:hover {
+    background-color: rgba(0, 0, 0, .4);
+}
+
+
+
+/* === Form Control === */
+
+.form-control,
+.form-control:focus {
+    background: rgba(0, 0, 0, 0.4);
+    border-color: #313131;
+}
+
+.form-control:focus {
+    box-shadow: 0 0 0 1px #1f6288;
+}
+
+/* === Cards === */
+
+.card {
+    background-color: #252525;
+    border: none;
+    box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, .2);
+    margin-bottom: 40px;
+}
+
+.card-header {
+    background-color: rgba(0, 0, 0, .2);
+    border-color: rgba(0, 0, 0, .4);
+    position: relative;
+    cursor: pointer;
+}
+
+
+/* TABLES */
+table,
+.table {
+    color: #EEEEEE;
+    background: transparent;
+
+}
+
+.table-hover tbody tr:hover {
+    color: #EEEEEE;
+    background-color: rgba(0, 0, 0, .075);
+}
+
+table.fixed-width {
+    max-width: 500px;
+    margin: auto;
+}
+
+.table-bordered,
+.table-bordered>tbody>tr>td,
+.table-bordered>tbody>tr>th,
+.table-bordered>tfoot>tr>td,
+.table-bordered>tfoot>tr>th,
+.table-bordered>thead>tr>td,
+.table-bordered>thead>tr>th,
+.table>tbody>tr>td,
+.table>tbody>tr>th,
+.table>tfoot>tr>td,
+.table>tfoot>tr>th,
+.table>thead>tr>td,
+.table>thead>tr>th {
+    border-color: #555;
+}
+
+/*  IMAGES */
+/* img {
+    height: fit-content;
+    width: fit-content;
+} */
+
+img.icon {
+    display: inline-block;
+    vertical-align: middle;
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, .4));
+}
+
+.icon-64 {
+    height: 64px;
+    width: 64px;
+}
+
+.icon-48 {
+    height: 48px;
+    width: 48px;
+}
+
+.icon-32 {
+    height: 32px;
+    width: 32px;
+}
+
+.icon-24 {
+    height: 24px;
+    width: 24px;
+}
+
+
+
+.icon-composite {
+    height: 64px;
+    width: 64px;
+    display: inline-block;
+    position: relative;
+    padding: 0px;
+    margin: 0 6px;
+    border-radius: 2px;
+}
+
+.icon-composite .icon-bg {
+    height: 100%;
+    width: 100%;
+    opacity: 0.7;
+}
+
+.icon-composite .icon-fg {
+    height: 36px;
+    width: 36px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    filter: drop-shadow(0 0 1px rgba(0, 0, 0, 1)) brightness(110%);
+}
+
+.icon-composite .icon-text {
+    position: absolute;
+    bottom: 0;
+    right: 3px;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1em;
+    text-shadow: 0 1px 1px #000, 0 -1px 1px #000, 1px 0 1px #000, -1px 0 1px #000;
+}
+
+
+/* === Misc === */
+.h-100 {
+    height: 100% !important;
+}
+
+.btn-link {
+    padding: 0;
+    vertical-align: baseline;
+    color: #1f6288;
+}
+
+.fas {
+    padding: 0.5rem 0.25rem;
+}
+
+.bp-txt {
+    margin: 0 0.75rem;
+}
+
+
+/* === Tooltip === */
+
+.tool-tip {
+    position: relative;
+    cursor: pointer;
+}
+
+.tool-tip .tool-tip-text {
+    visibility: hidden;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #fff;
+    font-size: 0.9rem;
+    text-align: center;
+    border-radius: 6px;
+    border: 1px solid rgba(100, 100, 100, 0.3);
+    padding: 0.25rem 0.75rem;
+    position: absolute;
+    z-index: 1;
+    bottom: 115%;
+    left: 0;
+    transition: opacity 0.3s;
+}
+
+.tool-tip .tool-tip-text::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgba(100, 100, 100, 0.3) transparent transparent transparent;
+}
+
+.tool-tip:hover .tool-tip-text {
+    visibility: visible;
+    opacity: 1;
+}
