@@ -92,51 +92,39 @@
                     This is a work in progress, and a really rough draft.
                     <br>Mostly to get some info online so that I can use it myself ¯\_(ツ)_/¯... Got tired of
                     calculating/referencing this stuff every time.
-                    <br>Maybe someday it will be as good as my <a href="https://factoriocheatsheet.com/">Factorio Cheat Sheet</a>...
+                    <br>Updated <strong id="UpdateDate">2020-06-30</strong>
+                    <br>Maybe someday it will be as good as my
+                    <a href="https://factoriocheatsheet.com/">Factorio Cheat Sheet</a>...
                 </p>
             </div>
         </section>
         <section>
-            <div class="container">
+            <div class="container-fluid">
 
                 <div class="card">
                     <div class="card-header">
-                        <h4>Common Ratios (Normal Ore)</h4>
+                        <h4>Selected Build Ratios <small>(Normal Ore)</small></h4>
                     </div>
-                    <div id="Generate_HTML" class="card-body">
-
-                        <div id="Common_Ratios" class="list-group fixed-width">
-                            <a class="list-group-item" rel="noopener" target="_blank"
-                                href="https://kirkmcdonald.github.io/satisfactory-calculator/calc.html#tab=totals&items=concrete:f:4&overclock=modular-frame:50,rotor:50"
-                                title="">
-
-                                <div class="icon-composite">
-                                    <img class="icon icon-bg"
-                                        src="https://kirkmcdonald.github.io/satisfactory-calculator/images/Miner MK3.png"
-                                        title="Miner MK3">
-                                    <img class="icon icon-fg"
-                                        src="https://kirkmcdonald.github.io/satisfactory-calculator/images/Limestone.png"
-                                        title="Miner MK3">
-                                    <div class="icon-text">1</div>
-                                </div>
-
-                                <span><i class="fas fa-arrows-alt-h text-muted"></i></span>
-
-                                <div class="icon-composite">
-                                    <img class="icon icon-bg"
-                                        src="https://kirkmcdonald.github.io/satisfactory-calculator/images/Constructor.png"
-                                        title="Miner MK3">
-                                    <img class="icon icon-fg"
-                                        src="https://kirkmcdonald.github.io/satisfactory-calculator/images/Concrete.png"
-                                        title="Miner MK3">
-                                    <div class="icon-text">1</div>
-                                </div>
-
-                            </a>
-                        </div>
-
+                    <div id="ChainedRatios" class="card-body">
+                        <p>Reference for starter builds as the game progresses based on calculated ratios below
+                        </p>
                     </div>
                 </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Calculated Build Ratios <small>(Normal Ore)</small></h4>
+                    </div>
+                    <div id="CalculatedRatios" class="card-body">
+                        <p>Direct Products only! <span class="text-muted">Does NOT sum, child products</span></p>
+                    </div>
+                </div>
+
+
+
+
+
+
 
 
                 <div class="card">
@@ -147,54 +135,55 @@
 
                         <h4>Movement</h4>
 
-                        <p class="lead">Mining</p>
                         <table class="table table-sm table-hover fixed-width">
-                            <tr>
-                                <th><img class="icon icon-48"
-                                        src="https://kirkmcdonald.github.io/satisfactory-calculator/images/Iron Ore.png"
-                                        title="Iron Ore"></th>
-                                <th><img class="icon icon-48"
-                                        src="https://kirkmcdonald.github.io/satisfactory-calculator/images/Oil Pump.png"
-                                        title="Oil Pump"></th>
-                                <th><img class="icon icon-48"
-                                        src="https://kirkmcdonald.github.io/satisfactory-calculator/images/Miner MK1.png"
-                                        title="Miner MK1"></th>
-                                <th><img class="icon icon-48"
-                                        src="https://kirkmcdonald.github.io/satisfactory-calculator/images/Miner MK2.png"
-                                        title="Miner MK2"></th>
-                                <th><img class="icon icon-48"
-                                        src="https://kirkmcdonald.github.io/satisfactory-calculator/images/Miner MK3.png"
-                                        title="Miner MK3"></th>
-                            </tr>
-                            <tr>
-                                <td>Impure</td>
-                                <td>30 i/m</td>
-                                <td>30 i/m</td>
-                                <td>60 i/m</td>
-                                <td>120 i/m</td>
-                            </tr>
-                            <tr>
-                                <td>Normal</td>
-                                <td>60 i/m</td>
-                                <td>60 i/m</td>
-                                <td>120 i/m</td>
-                                <td>240 i/m</td>
-                            </tr>
-                            <tr>
-                                <td>Pure</td>
-                                <td>120 i/m</td>
-                                <td>120 i/m</td>
-                                <td>240 i/m</td>
-                                <td>480 i/m</td>
-                            </tr>
+                            <caption>Mining</caption>
+                            <thead>
+                                <tr>
+                                    <th><img class="icon icon-48"
+                                            src="https://kirkmcdonald.github.io/satisfactory-calculator/images/Iron Ore.png"
+                                            title="Iron Ore"></th>
+                                    <th><img class="icon icon-48"
+                                            src="https://kirkmcdonald.github.io/satisfactory-calculator/images/Oil Pump.png"
+                                            title="Oil Pump"></th>
+                                    <th><img class="icon icon-48"
+                                            src="https://kirkmcdonald.github.io/satisfactory-calculator/images/Miner MK1.png"
+                                            title="Miner MK1"></th>
+                                    <th><img class="icon icon-48"
+                                            src="https://kirkmcdonald.github.io/satisfactory-calculator/images/Miner MK2.png"
+                                            title="Miner MK2"></th>
+                                    <th><img class="icon icon-48"
+                                            src="https://kirkmcdonald.github.io/satisfactory-calculator/images/Miner MK3.png"
+                                            title="Miner MK3"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Impure</td>
+                                    <td>30 i/m</td>
+                                    <td>30 i/m</td>
+                                    <td>60 i/m</td>
+                                    <td>120 i/m</td>
+                                </tr>
+                                <tr>
+                                    <td>Normal</td>
+                                    <td>60 i/m</td>
+                                    <td>60 i/m</td>
+                                    <td>120 i/m</td>
+                                    <td>240 i/m</td>
+                                </tr>
+                                <tr>
+                                    <td>Pure</td>
+                                    <td>120 i/m</td>
+                                    <td>120 i/m</td>
+                                    <td>240 i/m</td>
+                                    <td>480 i/m</td>
+                                </tr>
+                            </tbody>
                         </table>
 
-                        <br>
-                        <br>
-
-                        <p class="lead">Belts</p>
 
                         <table class="table table-sm table-hover fixed-width">
+                            <caption>Belts</caption>
                             <tr>
                                 <th><img class="icon icon-48"
                                         src="https://kirkmcdonald.github.io/satisfactory-calculator/images/Conveyor Belt.png"
@@ -225,44 +214,43 @@
                             </tr>
                         </table>
 
-                        <br>
-                        <br>
 
                         <h4>Power</h4>
 
-                        <p class="lead">Generators</p>
                         <table class="table table-sm table-hover fixed-width">
+                            <caption>Generators</caption>
                             <tr>
                                 <th><img class="icon icon-48"
-                                        src="https://satisfactory-calculator.com/img/buildings/biomassBurner.png"
+                                        src="https://gamepedia.cursecdn.com/satisfactory_gamepedia_en/thumb/5/5e/The_HUB.png/48px-The_HUB.png"
                                         title="Biomass Burner"></th>
                                 <th><img class="icon icon-48"
-                                        src="https://satisfactory-calculator.com/img/buildings/coalGenerator.png"
+                                        src="https://static.satisfactory-calculator.com/img/gameUI/BiomassGenerator_256.png"
+                                        title="Biomass Burner"></th>
+                                <th><img class="icon icon-48"
+                                        src="https://static.satisfactory-calculator.com/img/gameUI/CoalGenerator_256.png"
                                         itle="Coal Generator"></th>
                                 <th><img class="icon icon-48"
-                                        src="https://satisfactory-calculator.com/img/buildings/fuelGenerator.png"
+                                        src="https://static.satisfactory-calculator.com/img/gameUI/FuelGenerator_256.png"
                                         itle="Fuel Generator"></th>
                                 <th><img class="icon icon-48"
-                                        src="https://satisfactory-calculator.com/img/buildings/geoThermalGenerator.png"
+                                        src="https://static.satisfactory-calculator.com/img/gameUI/GeoThermalPowerGenerator_256.png"
                                         title="Geo Thermal Generator"></th>
                                 <th><img class="icon icon-48"
-                                        src="https://satisfactory-calculator.com/img/buildings/nuclearPowerPlant.png"
+                                        src="https://static.satisfactory-calculator.com/img/gameUI/NuclearPowerplant_256.png"
                                         title="Nuclear Power Plant"></th>
                             </tr>
                             <tr>
                                 <td>20 MW</td>
-                                <td>50 MW</td>
+                                <td>30 MW</td>
+                                <td>75 MW</td>
                                 <td>150 MW</td>
                                 <td>200 MW</td>
                                 <td>2500 MW</td>
                             </tr>
                         </table>
 
-                        <br>
-                        <br>
-
-                        <p class="lead">Extraction</p>
                         <table class="table table-sm table-hover fixed-width">
+                            <caption>Extraction</caption>
                             <tr>
                                 <th><img class="icon icon-48"
                                         src="https://kirkmcdonald.github.io/satisfactory-calculator/images/Miner MK1.png"
@@ -274,22 +262,23 @@
                                         src="https://kirkmcdonald.github.io/satisfactory-calculator/images/Miner MK3.png"
                                         title="Miner MK3"></th>
                                 <th><img class="icon icon-48"
+                                        src="https://gamepedia.cursecdn.com/satisfactory_gamepedia_en/thumb/6/6b/Water_Extractor.png/128px-Water_Extractor.png"
+                                        title="Water Extractor"></th>
+                                <th><img class="icon icon-48"
                                         src="https://kirkmcdonald.github.io/satisfactory-calculator/images/Oil Pump.png"
-                                        title="Oil Pump"></th>
+                                        title="Oil Extractor"></th>
                             </tr>
                             <tr>
                                 <td>5 MW</td>
                                 <td>12 MW</td>
                                 <td>30 MW</td>
+                                <td>20 MW</td>
                                 <td>40 MW</td>
                             </tr>
                         </table>
 
-                        <br>
-                        <br>
-
-                        <p class="lead">Production</p>
                         <table class="table table-sm table-hover fixed-width">
+                            <caption>Production</caption>
                             <tr>
                                 <th><img class="icon icon-48"
                                         src="https://kirkmcdonald.github.io/satisfactory-calculator/images/Smelter.png"
@@ -320,12 +309,9 @@
                             </tr>
                         </table>
 
-                        <br>
-                        <br>
-
-                        <p class="lead">Fuel burn time</p>
 
                         <table class="table table-sm table-hover fixed-width">
+                            <caption>Fuel burn time</caption>
                             <tr>
                                 <th>
                                     <img class="icon icon-32"
@@ -339,17 +325,22 @@
                                 </th>
                                 <th>
                                     <img class="icon icon-32"
-                                        src="https://kirkmcdonald.github.io/satisfactory-calculator/images/Biofuel.png"
-                                        title="Biofuel">
+                                        src="https://gamepedia.cursecdn.com/satisfactory_gamepedia_en/thumb/5/5c/Petroleum_Coke.png/128px-Petroleum_Coke.png"
+                                        title="Petroleum Coke">
                                 </th>
                                 <th>
                                     <img class="icon icon-32"
-                                        src="https://kirkmcdonald.github.io/satisfactory-calculator/images/Fuel.png"
-                                        title="fuel">
+                                        src="https://gamepedia.cursecdn.com/satisfactory_gamepedia_en/thumb/4/44/Fuel.png/128px-Fuel.png"
+                                        title="Fuel">
                                 </th>
                                 <th>
                                     <img class="icon icon-32"
-                                        src="https://kirkmcdonald.github.io/satisfactory-calculator/images/Turbofuel.png"
+                                        src="https://gamepedia.cursecdn.com/satisfactory_gamepedia_en/thumb/2/2a/Liquid_Biofuel.png/128px-Liquid_Biofuel.png"
+                                        title="Liquid Biofuel">
+                                </th>
+                                <th>
+                                    <img class="icon icon-32"
+                                        src="https://gamepedia.cursecdn.com/satisfactory_gamepedia_en/thumb/0/08/Turbofuel.png/128px-Turbofuel.png"
                                         title="Turbofuel">
                                 </th>
                                 <th>
@@ -358,9 +349,10 @@
                                         title="Nuclear Fuel Rod">
                                 </th>
                             <tr>
-                                <td>5.4 s</td>
-                                <td>12 s</td>
-                                <td>2 s</td>
+                                <td>4 s</td>
+                                <td>8.4 s</td>
+                                <td>2.4 s</td>
+                                <td>4 s</td>
                                 <td>5 s</td>
                                 <td>13.3 s</td>
                                 <td>300 s</td>
@@ -368,19 +360,18 @@
                         </table>
 
 
-                        <br>
-                        <br>
 
-                        <p class="lead">Power Generators supplied by a belt of fuel.</p>
-                        <p>Formula: #Generators = Burn Time(s/i) * Belt Throughput (i/m) / 60s</p>
-                        <p>Ref:
-                            <a href="https://satisfactory.gamepedia.com/Coal_Generator">Wiki Coal Generator</a>,
-                            <a href="https://satisfactory.gamepedia.com/Fuel_Generator">Wiki Fuel Generator</a>,
-                            <a href="https://satisfactory.gamepedia.com/Nuclear_Power_Plant">Wiki Nuke PP</a>
-                        </p>
 
+
+
+
+
+
+
+                        <hr>
 
                         <table class="table table-sm table-hover fixed-width">
+                            <caption>Power Generators supplied by a belt of fuel.</caption>
                             <tr>
                                 <th></th>
                                 <th><img class="icon icon-48"
@@ -405,79 +396,49 @@
                             <tr>
                                 <td>
                                     <img class="icon icon-48"
-                                        src="https://satisfactory-calculator.com/img/buildings/coalGenerator.png"
+                                        src="https://static.satisfactory-calculator.com/img/gameUI/CoalGenerator_256.png"
                                         itle="Coal Generator">
                                     <img class="icon icon-32"
                                         src="https://kirkmcdonald.github.io/satisfactory-calculator/images/Coal.png"
                                         title="Coal">
                                 </td>
-                                <td>5.4</td>
+                                <td>4</td>
                                 <td>10.8</td>
-                                <td>24.3</td>
-                                <td>43.2</td>
-                                <td>70.2</td>
+                                <td>18</td>
+                                <td>32</td>
+                                <td>52</td>
 
                             </tr>
                             <tr>
                                 <td>
                                     <img class="icon icon-48"
-                                        src="https://satisfactory-calculator.com/img/buildings/coalGenerator.png"
+                                        src="https://static.satisfactory-calculator.com/img/gameUI/CoalGenerator_256.png"
                                         itle="Coal Generator">
                                     <img class="icon icon-32"
                                         src="https://kirkmcdonald.github.io/satisfactory-calculator/images/Compacted Coal.png"
                                         title="Compacted Coal">
                                 </td>
-                                <td>12</td>
-                                <td>24</td>
-                                <td>54</td>
-                                <td>96</td>
-                                <td>156</td>
+                                <td>8.4</td>
+                                <td>16.8</td>
+                                <td>37.8</td>
+                                <td>67.2</td>
+                                <td>109.2</td>
 
                             </tr>
                             <tr>
                                 <td>
                                     <img class="icon icon-48"
-                                        src="https://satisfactory-calculator.com/img/buildings/fuelGenerator.png"
-                                        itle="Fuel Generator">
+                                        src="https://static.satisfactory-calculator.com/img/gameUI/CoalGenerator_256.png"
+                                        itle="Coal Generator">
                                     <img class="icon icon-32"
-                                        src="https://kirkmcdonald.github.io/satisfactory-calculator/images/Biofuel.png"
-                                        title="BioFuel">
+                                        src="https://gamepedia.cursecdn.com/satisfactory_gamepedia_en/thumb/5/5c/Petroleum_Coke.png/128px-Petroleum_Coke.png"
+                                        title="Petroleum Coke">
                                 </td>
-                                <td>2</td>
-                                <td>4</td>
-                                <td>9</td>
-                                <td>16</td>
-                                <td>26</td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <img class="icon icon-48"
-                                        src="https://satisfactory-calculator.com/img/buildings/fuelGenerator.png"
-                                        itle="Fuel Generator">
-                                    <img class="icon icon-32"
-                                        src="https://kirkmcdonald.github.io/satisfactory-calculator/images/Fuel.png"
-                                        title="Fuel">
-                                </td>
-                                <td>5</td>
-                                <td>10</td>
-                                <td>22.5</td>
-                                <td>40</td>
-                                <td>65</td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <img class="icon icon-48"
-                                        src="https://satisfactory-calculator.com/img/buildings/fuelGenerator.png"
-                                        itle="Fuel Generator">
-                                    <img class="icon icon-32"
-                                        src="https://kirkmcdonald.github.io/satisfactory-calculator/images/Turbofuel.png"
-                                        title="TurboFuel">
-                                </td>
-                                <td>13.3</td>
-                                <td>26.6</td>
-                                <td>59.85</td>
-                                <td>106.4</td>
-                                <td>172.9</td>
+                                <td>2.4</td>
+                                <td>4.8</td>
+                                <td>10.8</td>
+                                <td>19.2</td>
+                                <td>31.2</td>
                             </tr>
                             <tr>
                                 <td>
@@ -495,6 +456,59 @@
                                 <td>3900</td>
                             </tr>
                         </table>
+
+
+
+                        <table class="table table-sm table-hover fixed-width">
+                            <caption>Power Generators supplied by a pipe of fuel.</caption>
+                            <tr>
+                                <th></th>
+                                <th>
+                                    <img class="icon icon-48"
+                                        src="https://static.satisfactory-calculator.com/img/gameUI/FuelGenerator_256.png"
+                                        itle="Fuel Generator">
+                                    <img class="icon icon-32"
+                                        src="https://gamepedia.cursecdn.com/satisfactory_gamepedia_en/thumb/4/44/Fuel.png/128px-Fuel.png"
+                                        title="Fuel">
+                                </th>
+
+                                <th>
+                                    <img class="icon icon-48"
+                                        src="https://static.satisfactory-calculator.com/img/gameUI/FuelGenerator_256.png"
+                                        itle="Fuel Generator">
+                                    <img class="icon icon-32"
+                                        src="https://gamepedia.cursecdn.com/satisfactory_gamepedia_en/thumb/2/2a/Liquid_Biofuel.png/128px-Liquid_Biofuel.png"
+                                        title="Liquid Biofuel">
+                                </th>
+                                <th>
+                                    <img class="icon icon-48"
+                                        src="https://static.satisfactory-calculator.com/img/gameUI/FuelGenerator_256.png"
+                                        itle="Fuel Generator">
+                                    <img class="icon icon-32"
+                                        src="https://gamepedia.cursecdn.com/satisfactory_gamepedia_en/thumb/0/08/Turbofuel.png/128px-Turbofuel.png"
+                                        title="Turbofuel">
+                                </th>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <img class="icon icon-32"
+                                        src="https://gamepedia.cursecdn.com/satisfactory_gamepedia_en/thumb/b/b4/Pipeline.png/128px-Pipeline.png"
+                                        title="Pipeline">
+                                </td>
+                                <td>20</td>
+                                <td>25</td>
+                                <td>66.5</td>
+                            </tr>
+                        </table>
+
+
+                        <p>Formula: #Generators = Burn Time(s/i) * Belt Throughput (i/m) / 60s</p>
+                        <p>Ref:
+                            <a href="https://satisfactory.gamepedia.com/Coal_Generator">Wiki Coal Generator</a>,
+                            <a href="https://satisfactory.gamepedia.com/Fuel_Generator">Wiki Fuel Generator</a>,
+                            <a href="https://satisfactory.gamepedia.com/Nuclear_Power_Plant">Wiki Nuke PP</a>
+                        </p>
 
                     </div>
                 </div>
@@ -541,6 +555,12 @@
             </div>
 
 
+
+
+
+
+
+
             </div>
         </section>
     </main>
@@ -554,7 +574,7 @@
                 </div>
                 <div class="col-6">
                     See
-                    <a href="https://github.com/deniszholob/Satisfactory-blueprints" rel="noopener" target="_blank">
+                    <a href="https://github.com/deniszholob/satisfactory-cheat-sheet" rel="noopener" target="_blank">
                         src on Github
                     </a>
                 </div>
@@ -563,7 +583,7 @@
     </footer>
 
     <!-- https://jakearchibald.com/2017/es-modules-in-browsers/ -->
-    <script src="./js/main.js" type="module"></script>
+    <script src="./scripts/main.js" type="module"></script>
 </body>
 
 

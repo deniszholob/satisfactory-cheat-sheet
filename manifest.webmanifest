@@ -1,0 +1,20 @@
+{
+  "name": "Satisfactory Cheat Sheet",
+  "short_name": "Cheat Sheet",
+  "theme_color": "#FF8400",
+  "background_color": "#141516",
+  "display": "standalone",
+  "scope": "./",
+  "start_url": "./?utm_source=homescreen",
+  "dir": "ltr",
+  "lang": "en-US",
+  "orientation": "portrait-primary",
+  "prefer_related_applications": false,
+  "icons": [
+    {
+      "src": "images/satisfactory_logo_full_color_square.png",
+      "sizes": "1024x1024",
+      "type": "image/png"
+    }
+  ]
+}

@@ -17,13 +17,24 @@ a:hover {
     text-decoration: none;
 }
 
+hr {
+  display: block;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 1px solid rgba(0,0,0,1);
+  border-color: #ff8400;
+}
+
 section,
 .section {
     display: block;
 }
 
 section .container,
-.section .container {
+.section .container,
+section .container-fluid,
+.section .container-fluid {
     padding-top: 20px;
     padding-bottom: 20px;
 }
@@ -31,34 +42,46 @@ section .container,
 
 /* === List Group === */
 
-.list-group,
+/* .list-group,
 .form-control {
     min-width: 400px;
     max-width: 600px;
     margin: auto;
     flex: 0 0 50%;
     max-width: 50%;
-}
+} */
 
 .list-group {
     padding: 10px;
-    ;
 }
 
 
 .card-body {
-    display: flex;
-    flex-direction: column;
+    /* flex: 1 1 auto; */
 }
 
-#Generate_HTML.card-body {
-    flex-direction: row;
+
+.list-group {
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
+  padding-left: 0rem;
+  padding-right: 0rem;
 }
 
-.fixed-width {
+.list-group-item {
+  display: flex;
+  flex-direction: column;
+  /* align-items: stretch; */
+}
+
+/* .fixed-width {
     max-width: 500px;
+    max-width: 20%;
+    min-width: fit-content;
     margin: auto;
-}
+} */
 
 /* .list-group-item {
     background-color: rgba(0, 0, 0, 0.2);
@@ -103,8 +126,8 @@ section .container,
     background-color: rgba(0, 0, 0, .2);
     border-color: #313131;
     position: relative;
-    display: block;
-    padding: .5rem .75rem;
+    /* display: block; */
+    padding: .5rem .74rem;
     margin-bottom: -1px;
     border: 1px solid rgba(0, 0, 0, .125);
 }
@@ -149,7 +172,7 @@ table,
 .table {
     color: #EEEEEE;
     background: transparent;
-
+    margin-bottom: 30px;
 }
 
 .table-hover tbody tr:hover {
@@ -158,8 +181,9 @@ table,
 }
 
 table.fixed-width {
-    max-width: 500px;
-    margin: auto;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .table-bordered,
@@ -176,6 +200,12 @@ table.fixed-width {
 .table>thead>tr>td,
 .table>thead>tr>th {
     border-color: #555;
+}
+
+.table caption, table caption {
+  caption-side: top;
+  text-align: center;
+  padding: 5px 0;
 }
 
 /*  IMAGES */
@@ -306,4 +336,8 @@ img.icon {
 .tool-tip:hover .tool-tip-text {
     visibility: visible;
     opacity: 1;
+}
+
+.full-width {
+  width: 100%;
 }
