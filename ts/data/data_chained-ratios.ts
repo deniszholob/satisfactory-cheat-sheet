@@ -141,6 +141,20 @@ export const data_common_ratios = {
       ]
     },
     {
+      "productionItems": [
+        {
+          "name": "Water",
+          "machine": "Water Extractor",
+          "count": 3
+        },
+        {
+          "name": "Coal",
+          "machine": "Coal Generator",
+          "count": 8
+        },
+      ]
+    },
+    {
       "link": "https://kirkmcdonald.github.io/satisfactory-calculator/calc.html#tab=totals&items=steel-beam:f:3,steel-pipe:f:3",
       "productionItems": [
         {

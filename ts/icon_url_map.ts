@@ -28,7 +28,7 @@ export const iconUrlMap = {
   "Motor": "https://static.satisfactory-calculator.com/img/gameUI/IconDesc_Engine_256.png",
   "Circuit Board": "https://static.satisfactory-calculator.com/img/gameUI/IconDesc_CircuitBoard_256.png",
   "Encased Uranium Cell": "https://static.satisfactory-calculator.com/img/gameUI/IconDesc_NuclearCell_256.png",
-  "": "",
+  "Coal Generator": "https://static.satisfactory-calculator.com/img/gameUI/CoalGenerator_256.png",
   "": "",
   "": "",
   "": "",
