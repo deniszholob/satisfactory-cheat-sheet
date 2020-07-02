@@ -106,37 +106,37 @@ export const data_common_ratios = {
         {
           "name": "Iron Ore",
           "machine": "Miner MK1",
-          "count": 3
+          "count": 1.75 // 3.5/2 = 1.75
         },
         {
           "name": "Iron Ingot",
           "machine": "Smelter",
-          "count": 6
+          "count": 3.5 // 1.5p/1 + 4r/2 = 1.5+2 = 3.5
         },
         {
           "name": "Iron Plate",
           "machine": "Constructor",
-          "count": 1.5
+          "count": 1.5 // 3/2 = 1.5
         },
         {
           "name": "Iron Rod",
           "machine": "Constructor",
-          "count": 3 //1.3 + 1.6
+          "count": 4 // (screws)3s:2r => 4s:2.666r, | (rotors) 8/6r = 1.333r | 2.666 + 1.333 = 4r
         },
         {
           "name": "Screw",
           "machine": "Constructor",
-          "count": 1.5 + 2.5 // 3/2 + 15/6
+          "count": 4 // (reinforced)3/2 + (rotors)15/6 = 1.5 + 2.5 = 4s
         },
         {
           "name": "Reinforced Iron Plate",
           "machine": "Assembler",
-          "count": 1
+          "count": 1 //         1.5s :1.5p
         },
         {
           "name": "Rotor",
           "machine": "Assembler",
-          "count": 1
+          "count": 1 // 1.333r :2.5s
         },
       ]
     },
