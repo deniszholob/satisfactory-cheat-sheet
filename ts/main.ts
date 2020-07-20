@@ -9,10 +9,13 @@ import { data_common_ratios } from "./data/data_chained-ratios.js";
 import { RatioRenderService } from "./services/ratio-render-service.js";
 import { UtilService } from './services/util-service.js';
 import { product, ProductionItem, ProductionItemSet } from "./type-definitions/index";
+import { data_links } from "./data/data_links.js";
+import { DataLinks, DataLink } from "./type-definitions/DataLinks.js";
 
 // Constants
 const elRootCalculatedRatios = document.getElementById("CalculatedRatios") as HTMLElement;
 const elRootChainedRatios = document.getElementById("ChainedRatios") as HTMLElement;
+const elRootLinks = document.getElementById("Links") as HTMLElement;
 const renderServiceCalculatedRatios = new RatioRenderService(elRootCalculatedRatios);
 const renderServiceChainedRatios = new RatioRenderService(elRootChainedRatios);
 
@@ -21,6 +24,21 @@ let rawData: any = {};
 function onInit() {
   renderRatioData();
   renderBeltData();
+  elRootLinks.innerHTML = "";
+  renderLinkData((data_links as DataLinks).mainLinks);
+  renderLinkData((data_links as DataLinks).communityLinks);
+}
+
+function renderLinkData(data: DataLink[] ){
+  const elUlLinks = document.createElement("ul");
+  data.forEach(elLink => {
+    const elaLink = UtilService.getExternalLinkEl(elLink.url);
+    elaLink.innerHTML = elLink.text;
+    const elLiLink = document.createElement("li");
+    elLiLink.appendChild(elaLink);
+    elRootLinks.appendChild(elLiLink);
+  });
+  elRootLinks.appendChild(elUlLinks);
 }
 
 function renderBeltData(){

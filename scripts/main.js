@@ -8,15 +8,31 @@ import { data_smelting_rates } from "./data/calc-ratios/data_smelting.js";
 import { data_common_ratios } from "./data/data_chained-ratios.js";
 import { RatioRenderService } from "./services/ratio-render-service.js";
 import { UtilService } from './services/util-service.js';
+import { data_links } from "./data/data_links.js";
 // Constants
 const elRootCalculatedRatios = document.getElementById("CalculatedRatios");
 const elRootChainedRatios = document.getElementById("ChainedRatios");
+const elRootLinks = document.getElementById("Links");
 const renderServiceCalculatedRatios = new RatioRenderService(elRootCalculatedRatios);
 const renderServiceChainedRatios = new RatioRenderService(elRootChainedRatios);
 let rawData = {};
 function onInit() {
     renderRatioData();
     renderBeltData();
+    elRootLinks.innerHTML = "";
+    renderLinkData(data_links.mainLinks);
+    renderLinkData(data_links.communityLinks);
+}
+function renderLinkData(data) {
+    const elUlLinks = document.createElement("ul");
+    data.forEach(elLink => {
+        const elaLink = UtilService.getExternalLinkEl(elLink.url);
+        elaLink.innerHTML = elLink.text;
+        const elLiLink = document.createElement("li");
+        elLiLink.appendChild(elaLink);
+        elRootLinks.appendChild(elLiLink);
+    });
+    elRootLinks.appendChild(elUlLinks);
 }
 function renderBeltData() {
 }
