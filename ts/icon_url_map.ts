@@ -1,5 +1,5 @@
 export const iconUrlMap = {
-  "Pipeline": "https://static.satisfactory-calculator.com/img/gameUI/Pipes_256.png",
+  "Pipeline": "https://static.satisfactory-calculator.com/img/gameUI/IconDesc_Pipes_256.png",
   "Solid Biofuel": "https://static.satisfactory-calculator.com/img/gameUI/IconDesc_SolidBiofuel_256.png",
   "Smart Plating": "https://static.satisfactory-calculator.com/img/gameUI/IconDesc_SpelevatorPart_1_256.png",
   "Versatile Framework": "https://static.satisfactory-calculator.com/img/gameUI/IconDesc_SpelevatorPart_2_256.png",

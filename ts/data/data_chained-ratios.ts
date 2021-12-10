@@ -250,6 +250,66 @@ export const data_common_ratios = {
         },
       ]
     },
+    {
+      "link": "4",
+      "productionItems": [
+        {
+          "name": "Alumina Solution",
+          "machine": "Oil Refinery",
+          "count": 2
+        },
+        {
+          "name": "Bauxite",
+          "machine": "Miner MK2",
+          "count": 1
+        },
+        {
+          "name": "Water",
+          "machine": "Water Extractor",
+          "count": 2
+        },
+      ]
+    },
+    {
+      "link": "4",
+      "productionItems": [
+        {
+          "name": "Aluminum Scrap",
+          "machine": "Oil Refinery",
+          "count": 1
+        },
+        {
+          "name": "Alumina Solution",
+          "machine": "Oil Refinery",
+          "count": 2
+        },
+        {
+          "name": "Coal",
+          "machine": "Miner MK1",
+          "count": 1
+        },
+      ]
+    },
+    {
+      "link": "4",
+      "productionItems": [
+        {
+          "name": "Aluminum Ingot",
+          "machine": "Foundry",
+          "count": 4
+        },
+        {
+          "name": "Aluminum Scrap",
+          "machine": "Oil Refinery",
+          "count": 1
+        },
+        {
+          "name": "Silica",
+          "machine": "Constructor",
+          "count": 5
+        },
+      ]
+    },
   ],
 
 };
