@@ -1,6 +1,6 @@
 :root {
-  --c-primary: #FF8400;
-  --c-primary-dark: #E46C00;
+  --c-primary: #ff8400;
+  --c-primary-dark: #e46c00;
   --c-text: #eee;
   --c-muted: #808e99;
   --c-dark: #313131;
@@ -8,21 +8,22 @@
 
 html,
 body {
-    background-color: #141516;
-    color: var(--c-text);
+  background-color: #141516;
+  color: var(--c-text);
 }
 
 .txt-muted {
-    color: var(--c-muted);
+  color: var(--c-muted);
 }
 
-a, .btn-outline-primary {
-    color: var(--c-primary);
+a,
+.btn-outline-primary {
+  color: var(--c-primary);
 }
 
 a:hover {
-    color: var(--c-primary-dark);
-    text-decoration: none;
+  color: var(--c-primary-dark);
+  text-decoration: none;
 }
 
 hr {
@@ -30,23 +31,22 @@ hr {
   margin-top: 1rem;
   margin-bottom: 1rem;
   border: 0;
-  border-top: 1px solid rgba(0,0,0,1);
+  border-top: 1px solid rgba(0, 0, 0, 1);
   border-color: var(--c-primary);
 }
 
 section,
 .section {
-    display: block;
+  display: block;
 }
 
 section .container,
 .section .container,
 section .container-fluid,
 .section .container-fluid {
-    padding-top: 20px;
-    padding-bottom: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
-
 
 /* === List Group === */
 
@@ -60,14 +60,12 @@ section .container-fluid,
 } */
 
 .list-group {
-    padding: 10px;
+  padding: 10px;
 }
-
 
 .card-body {
-    /* flex: 1 1 auto; */
+  /* flex: 1 1 auto; */
 }
-
 
 .list-group {
   flex-direction: row;
@@ -123,69 +121,65 @@ section .container-fluid,
     flex: 2 0px;
 } */
 
-
 .list-group-item:first-child {
-    border-top-left-radius: .25rem;
-    border-top-right-radius: .25rem;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
 }
 
 .list-group-item {
-    transition: .2s;
-    background-color: rgba(0, 0, 0, .2);
-    border-color: var(--c-dark);
-    position: relative;
-    /* display: block; */
-    padding: .5rem .74rem;
-    margin-bottom: -1px;
-    border: 1px solid rgba(0, 0, 0, .125);
+  transition: 0.2s;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-color: var(--c-dark);
+  position: relative;
+  /* display: block; */
+  padding: 0.5rem 0.74rem;
+  margin-bottom: -1px;
+  border: 1px solid rgba(0, 0, 0, 0.125);
 }
 
 .list-group-item:hover {
-    background-color: rgba(0, 0, 0, .4);
+  background-color: rgba(0, 0, 0, 0.4);
 }
-
-
 
 /* === Form Control === */
 
 .form-control,
 .form-control:focus {
-    background: rgba(0, 0, 0, 0.4);
-    border-color: var(--c-dark);
+  background: rgba(0, 0, 0, 0.4);
+  border-color: var(--c-dark);
 }
 
 .form-control:focus {
-    box-shadow: 0 0 0 1px var(--c-primary);
+  box-shadow: 0 0 0 1px var(--c-primary);
 }
 
 /* === Cards === */
 
 .card {
-    background-color: #252525;
-    border: none;
-    box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, .2);
-    margin-bottom: 40px;
+  background-color: #252525;
+  border: none;
+  box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.2);
+  margin-bottom: 40px;
 }
 
 .card-header {
-    background-color: rgba(0, 0, 0, .2);
-    border-color: rgba(0, 0, 0, .4);
-    position: relative;
-    cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-color: rgba(0, 0, 0, 0.4);
+  position: relative;
+  cursor: pointer;
 }
-
 
 /* TABLES */
 table,
 .table {
-    color: var(--c-text);
-    background: transparent;
-    margin-bottom: 30px;
+  color: var(--c-text);
+  background: transparent;
+  margin-bottom: 30px;
 }
 
 .table-hover tbody tr:hover {
-    color: var(--c-text);
-    background-color: rgba(0, 0, 0, .075);
+  color: var(--c-text);
+  background-color: rgba(0, 0, 0, 0.075);
 }
 
 table.fixed-width {
@@ -195,22 +189,23 @@ table.fixed-width {
 }
 
 .table-bordered,
-.table-bordered>tbody>tr>td,
-.table-bordered>tbody>tr>th,
-.table-bordered>tfoot>tr>td,
-.table-bordered>tfoot>tr>th,
-.table-bordered>thead>tr>td,
-.table-bordered>thead>tr>th,
-.table>tbody>tr>td,
-.table>tbody>tr>th,
-.table>tfoot>tr>td,
-.table>tfoot>tr>th,
-.table>thead>tr>td,
-.table>thead>tr>th {
-    border-color: #555;
+.table-bordered > tbody > tr > td,
+.table-bordered > tbody > tr > th,
+.table-bordered > tfoot > tr > td,
+.table-bordered > tfoot > tr > th,
+.table-bordered > thead > tr > td,
+.table-bordered > thead > tr > th,
+.table > tbody > tr > td,
+.table > tbody > tr > th,
+.table > tfoot > tr > td,
+.table > tfoot > tr > th,
+.table > thead > tr > td,
+.table > thead > tr > th {
+  border-color: #555;
 }
 
-.table caption, table caption {
+.table caption,
+table caption {
   caption-side: top;
   text-align: center;
   padding: 5px 0;
@@ -223,80 +218,76 @@ table.fixed-width {
 } */
 
 img.icon {
-    display: inline-block;
-    vertical-align: middle;
-    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, .4));
+  display: inline-block;
+  vertical-align: middle;
+  filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.4));
 }
 
 .icon-64 {
-    height: 64px;
-    width: 64px;
+  height: 64px;
+  width: 64px;
 }
 
 .icon-48 {
-    height: 48px;
-    width: 48px;
+  height: 48px;
+  width: 48px;
 }
 
 .icon-32 {
-    height: 32px;
-    width: 32px;
+  height: 32px;
+  width: 32px;
 }
 
 .icon-24 {
-    height: 24px;
-    width: 24px;
+  height: 24px;
+  width: 24px;
 }
 
-
-
 .icon-composite {
-    height: 64px;
-    width: 64px;
-    display: inline-block;
-    position: relative;
-    padding: 0px;
-    margin: 0 6px;
-    border-radius: 2px;
+  height: 64px;
+  width: 64px;
+  display: inline-block;
+  position: relative;
+  padding: 0px;
+  margin: 0 6px;
+  border-radius: 2px;
 }
 
 .icon-composite .icon-bg {
-    height: 100%;
-    width: 100%;
-    opacity: 0.7;
+  height: 100%;
+  width: 100%;
+  opacity: 0.7;
 }
 
 .icon-composite .icon-fg {
-    height: 36px;
-    width: 36px;
-    position: absolute;
-    left: 0;
-    top: 0;
-    filter: drop-shadow(0 0 1px rgba(0, 0, 0, 1)) brightness(110%);
+  height: 36px;
+  width: 36px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  filter: drop-shadow(0 0 1px rgba(0, 0, 0, 1)) brightness(110%);
 }
 
 .icon-composite .icon-text {
-    position: absolute;
-    bottom: 0;
-    right: 3px;
-    color: #fff;
-    font-weight: 700;
-    font-size: 1em;
-    text-shadow: 0 1px 1px #000, 0 -1px 1px #000, 1px 0 1px #000, -1px 0 1px #000;
+  position: absolute;
+  bottom: 0;
+  right: 3px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1em;
+  text-shadow: 0 1px 1px #000, 0 -1px 1px #000, 1px 0 1px #000, -1px 0 1px #000;
 }
-
 
 /* === Misc === */
 .h-100 {
-    height: 100% !important;
+  height: 100% !important;
 }
 
 .btn-link {
-    padding: 0;
-    vertical-align: baseline;
-    color: var(--c-primary);
+  padding: 0;
+  vertical-align: baseline;
+  color: var(--c-primary);
 }
-
 
 .btn-outline-primary {
   font-weight: bold;
@@ -312,65 +303,64 @@ img.icon {
 
 .btn-outline-primary:not(:disabled):not(.disabled).active,
 .btn-outline-primary:not(:disabled):not(.disabled):active {
-    box-shadow: 0 0 0 3px var(--c-primary);
-    background-color: var(--c-dark);
-    border-color: var(--c-dark);
+  box-shadow: 0 0 0 3px var(--c-primary);
+  background-color: var(--c-dark);
+  border-color: var(--c-dark);
 }
 
 .btn-outline-primary.focus,
 .btn-outline-primary:focus,
 .btn-outline-primary:not(:disabled):not(.disabled).active:focus,
 .btn-outline-primary:not(:disabled):not(.disabled):active:focus {
-    box-shadow: 0 0 0 3px var(--c-primary);
+  box-shadow: 0 0 0 3px var(--c-primary);
 }
 
 .fas {
-    padding: 0.5rem 0.25rem;
+  padding: 0.5rem 0.25rem;
 }
 
 .bp-txt {
-    margin: 0 0.75rem;
+  margin: 0 0.75rem;
 }
-
 
 /* === Tooltip === */
 
 .tool-tip {
-    position: relative;
-    cursor: pointer;
+  position: relative;
+  cursor: pointer;
 }
 
 .tool-tip .tool-tip-text {
-    visibility: hidden;
-    opacity: 0;
-    background-color: rgba(0, 0, 0, 0.9);
-    color: #fff;
-    font-size: 0.9rem;
-    text-align: center;
-    border-radius: 6px;
-    border: 1px solid rgba(100, 100, 100, 0.3);
-    padding: 0.25rem 0.75rem;
-    position: absolute;
-    z-index: 1;
-    bottom: 115%;
-    left: 0;
-    transition: opacity 0.3s;
+  visibility: hidden;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: #fff;
+  font-size: 0.9rem;
+  text-align: center;
+  border-radius: 6px;
+  border: 1px solid rgba(100, 100, 100, 0.3);
+  padding: 0.25rem 0.75rem;
+  position: absolute;
+  z-index: 1;
+  bottom: 115%;
+  left: 0;
+  transition: opacity 0.3s;
 }
 
 .tool-tip .tool-tip-text::after {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: rgba(100, 100, 100, 0.3) transparent transparent transparent;
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: rgba(100, 100, 100, 0.3) transparent transparent transparent;
 }
 
 .tool-tip:hover .tool-tip-text {
-    visibility: visible;
-    opacity: 1;
+  visibility: visible;
+  opacity: 1;
 }
 
 .full-width {

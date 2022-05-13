@@ -8,20 +8,20 @@ import { data_smelting_rates } from "./data/calc-ratios/data_smelting.js";
 import { data_common_ratios } from "./data/data_chained-ratios.js";
 import { RatioRenderService } from "./services/ratio-render-service.js";
 import { UtilService } from './services/util-service.js';
-import { product, ProductionItem, ProductionItemSet } from "./type-definitions/index";
+import { Product, ProductionItem, ProductionItemSet } from "./type-definitions/index";
 import { data_links } from "./data/data_links.js";
 import { DataLinks, DataLink } from "./type-definitions/DataLinks.js";
 
 // Constants
-const elRootCalculatedRatios = document.getElementById("CalculatedRatios") as HTMLElement;
-const elRootChainedRatios = document.getElementById("ChainedRatios") as HTMLElement;
-const elRootLinks = document.getElementById("Links") as HTMLElement;
-const renderServiceCalculatedRatios = new RatioRenderService(elRootCalculatedRatios);
-const renderServiceChainedRatios = new RatioRenderService(elRootChainedRatios);
+const elRootCalculatedRatios: HTMLElement = document.getElementById("CalculatedRatios") as HTMLElement;
+const elRootChainedRatios: HTMLElement = document.getElementById("ChainedRatios") as HTMLElement;
+const elRootLinks: HTMLElement = document.getElementById("Links") as HTMLElement;
+const renderServiceCalculatedRatios: RatioRenderService = new RatioRenderService(elRootCalculatedRatios);
+const renderServiceChainedRatios: RatioRenderService = new RatioRenderService(elRootChainedRatios);
 
 let rawData: any = {};
 
-function onInit() {
+function onInit(): void {
   renderRatioData();
   renderBeltData();
   elRootLinks.innerHTML = "";
@@ -29,25 +29,27 @@ function onInit() {
   renderLinkData((data_links as DataLinks).communityLinks);
 }
 
-function renderLinkData(data: DataLink[] ){
-  const elUlLinks = document.createElement("ul");
-  data.forEach(elLink => {
-    const elaLink = UtilService.getExternalLinkEl(elLink.url);
+
+
+function renderLinkData(data: DataLink[]): void {
+  const elUlLinks: HTMLUListElement = document.createElement("ul");
+  data.forEach((elLink: DataLink): void => {
+    const elaLink: HTMLAnchorElement = UtilService.getExternalLinkEl(elLink.url);
     elaLink.innerHTML = elLink.text;
-    const elLiLink = document.createElement("li");
+    const elLiLink: HTMLLIElement = document.createElement("li");
     elLiLink.appendChild(elaLink);
     elRootLinks.appendChild(elLiLink);
   });
   elRootLinks.appendChild(elUlLinks);
 }
 
-function renderBeltData(){
+function renderBeltData(): void {
 
 }
 
 
-function renderRatioData() {
-  if(typeof data_common_ratios === 'undefined' || data_common_ratios === null) {
+function renderRatioData(): void {
+  if (typeof data_common_ratios === 'undefined' || data_common_ratios === null) {
     console.error("Error: data is null...");
   } else {
     // elRootChainedRatios.innerHTML = "";
@@ -77,13 +79,13 @@ function renderRatioData() {
   }
 }
 
-function renderChainedRatios() {
+function renderChainedRatios(): void {
   // renderServiceChainedRatios.render(data_common_ratios["Ratios_Smelting"], "Ore Ratios");
   // renderServiceChainedRatios.render(data_common_ratios["Ratios_Construction"], "Product Ratios");
   renderServiceChainedRatios.render(data_common_ratios["Ratios"]);
 }
 
-function renderCalculatedRatios() {
+function renderCalculatedRatios(): void {
   let data: ProductionItemSet[] = [];
   data = parseData(data_smelting_rates.recipes, 'Smelting Rates');
   renderServiceCalculatedRatios.render(data, 'Smelting Rates');
@@ -104,38 +106,38 @@ function parseData(rawDataIn: any, name: string): ProductionItemSet[] {
   let piSet: ProductionItem[] = [];
   let piRatio: number[];
 
-  Object.entries(rawDataIn).forEach(([k, v], i) => {
+  Object.entries(rawDataIn).forEach(([k, v]: [string, unknown], i: number): void => {
     // console.log(`====== ${k} ======`);
-    let multiplier = 1;
+    let multiplier: number = 1;
     piSet = [];
 
-    let num: number = Number(Object.values((v as product).out)[0]);
+    let num: number = Number(Object.values((v as Product).out)[0]);
     while (num * multiplier < 1) { multiplier *= 10; }
 
     // Out
     piSet.push({
-      name: Object.keys((v as product).out)[0],
+      name: Object.keys((v as Product).out)[0],
       count: 1,
-      machine: (v as product).machine
+      machine: (v as Product).machine
     })
 
-    const ratesRequired: number[] = Object.entries((v as product).in).map(([k, v]) => (v as number * multiplier));
+    const ratesRequired: number[] = Object.entries((v as Product).in).map(([k, v]: [string, unknown]): number => (v as number * multiplier));
     const ratesProvided: number[] = [];
 
     // Ins
-    Object.entries((v as product).in).forEach(([item, irr]) => {
+    Object.entries((v as Product).in).forEach(([item, irr]: [string, unknown]): void => {
       // console.log(`----- ${item} -----`);
       let itemRequiredRate: number = (irr as number);
-      let reqItem: product = rawData[item] || rawData[UtilService.getHrName(item)];
+      let reqItem: Product = rawData[item] || rawData[UtilService.getHrName(item)];
       if (!reqItem) {
-        const key = Object.keys(rawData).find(k => k.includes(item) || k.includes(UtilService.getHrName(item)));
+        const key: string | undefined = Object.keys(rawData).find((k: string): boolean => k.includes(item) || k.includes(UtilService.getHrName(item)));
         if (key) { reqItem = rawData[key]; }
         else {
           console.error(`Can't find: ${item}`);
         }
       }
 
-      let itemProvidedRate = Object.values(reqItem.out)[0] as number;
+      let itemProvidedRate: number = Object.values(reqItem.out)[0] as number;
       ratesProvided.push(itemProvidedRate * multiplier);
       piSet.push({
         name: item,
@@ -150,17 +152,17 @@ function parseData(rawDataIn: any, name: string): ProductionItemSet[] {
     // console.log("Prov rates:");
     // console.log(ratesProvided);
 
-    let ratioMap = ratesRequired.map((n, i) => getRatioSimple(n, ratesProvided[i]));
+    let ratioMap: number[][] = ratesRequired.map((n: number, i: number): number[] => getRatioSimple(n, ratesProvided[i]));
     piRatio = ratioMap[0];
 
-    for (let i = 1; i < ratioMap.length; i++) {
+    for (let i: number = 1; i < ratioMap.length; i++) {
       piRatio = getRatioCompound(piRatio, ratioMap[i])
     }
     // console.log('piRatio')
     // console.log(piRatio);
 
     // Simplify Ratios
-    piSet.forEach((pi, i) => {
+    piSet.forEach((pi: ProductionItem, i: number): void => {
       pi.count = piRatio[i];
     })
     // console.log('piSet');
@@ -182,13 +184,13 @@ function parseData(rawDataIn: any, name: string): ProductionItemSet[] {
 function getRatioCompound(ratioA: number[], ratioB: number[]): number[] {
   // console.log(ratioA);
   // console.log(ratioB);
-  const lcm = getLcm([ratioA[0], ratioB[0]]);
+  const lcm: number = getLcm([ratioA[0], ratioB[0]]);
   // console.log(`lcm: ${lcm}`);
-  const ratio = [lcm];
-  for (let i = 1; i < ratioA.length; i++) {
+  const ratio: number[] = [lcm];
+  for (let i: number = 1; i < ratioA.length; i++) {
     ratio.push(lcm / ratioA[0] * ratioA[i]);
   }
-  for (let i = 1; i < ratioB.length; i++) {
+  for (let i: number = 1; i < ratioB.length; i++) {
     ratio.push(lcm / ratioB[0] * ratioB[i]);
   }
   // return [lcm, ...ratioA.map(n=>lcm/n*ratioB[0])]
@@ -198,7 +200,7 @@ function getRatioCompound(ratioA: number[], ratioB: number[]): number[] {
 function getRatioSimple(needs: number, provides: number): number[] {
   // console.log(needs);
   // console.log(provides);
-  const lcm = getLcm([needs, provides]);
+  const lcm: number = getLcm([needs, provides]);
   // console.log(`lcm: ${lcm}`);
   return [lcm / needs, lcm / provides];
 }
@@ -207,7 +209,7 @@ function getRatioSimple(needs: number, provides: number): number[] {
 /** Ref: https://www.geeksforgeeks.org/gcd-two-array-numbers/ */
 function getGcdArray(arr: number[]): number {
   let result: number = arr[0];
-  for (let i = 1; i < arr.length; i++) {
+  for (let i: number = 1; i < arr.length; i++) {
     result = getGcd(arr[i], result);
     if (result == 1) {
       return 1;
@@ -227,11 +229,11 @@ function getGcd(a: number, b: number): number {
 /** Ref: https://www.geeksforgeeks.org/lcm-of-given-array-elements/ */
 function getLcm(arr: number[]): number {
   // Initialize result
-  let ans = arr[0];
+  let ans: number = arr[0];
 
   // ans contains LCM of arr[0], ..arr[i]
   // after i'th iteration,
-  for (let i = 1; i < arr.length; i++)
+  for (let i: number = 1; i < arr.length; i++)
     ans = (arr[i] * ans) / getGcd(arr[i], ans);
 
   return ans;

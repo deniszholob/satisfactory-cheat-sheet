@@ -1,4 +1,4 @@
-export interface product {
+export interface Product {
   out: any;
   in: any;
   machine: string;
