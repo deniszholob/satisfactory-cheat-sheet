@@ -1,0 +1,23 @@
+{
+  "files.exclude": {
+    "**/node_modules": true,
+    "**/scripts/": true,
+    "**/.editorconfig": true,
+    "**/.gitignore": true,
+    "**/package-lock.json": true,
+    "**/tsconfig*": true,
+    "**/FUNDING.yml": true,
+    "**/LICENSE": true
+  },
+  "editor.renderWhitespace": "all",
+  "editor.rulers": [
+    80
+  ],
+  "explorer.sortOrderLexicographicOptions": "lower", // Case sensitive file ordering in tree
+  "workbench.iconTheme": "material-icon-theme",
+  "[html, scss, typescript, javascript, json, jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "cSpell.words": [],
+  "liveServer.settings.port": 5501
+}

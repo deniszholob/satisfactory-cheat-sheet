@@ -1,14 +1,17 @@
 {
   "name": "satisfactory-cheat-sheet",
   "version": "1.0.0",
+  "license": "ISC",
+  "author": "Denis Zholob",
   "description": "Satisfactory Cheat Sheet",
+  "repository": "github:deniszholob/satisfactory-cheat-sheet",
+  "private": true,
   "main": "main.js",
   "scripts": {
-    "build": "tsc -w"
+    "build": "tsc -w",
+    "start": "npx http-server ./index.html -p 47207"
   },
-  "author": "Denis Zholob",
-  "license": "ISC",
   "devDependencies": {
-    "typescript": "^4.1.3"
+    "typescript": "4.6.4"
   }
 }

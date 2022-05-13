@@ -10,9 +10,10 @@ Cheat Sheet for [Satisfactory](https://www.satisfactorygame.com/) game: *"A comp
 * Master branch is for the source code that's hosted [here](https://deniszholob.github.io/satisfactory-cheat-sheet/).
 
 # Support Me
-If you found the cheat sheet or the source code useful, consider supporting me on Patreon.
+If you find the cheat sheet or the source code useful, consider:
 
-[![button](https://c5.patreon.com/external/logo/downloads_wordmark_white_on_coral.png)](https://www.patreon.com/deniszholob)
+* Donating Ko-fi: https://ko-fi.com/deniszholob
+* Supporting on Patreon: https://www.patreon.com/deniszholob
 
 # Screenshots
 ![Satisfactory Cheat Sheet Desktop Website](images/screenshot_2020-06-30.png)
