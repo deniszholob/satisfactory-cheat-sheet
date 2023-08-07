@@ -1,125 +1,135 @@
 export const data_refining_rates: any = {
-  "recipes": {
-    "Fuel": {
-      "out": {
-        "Fuel": 40,
-        "Polymer Resin": 30
+  recipes: {
+    Fuel: {
+      out: {
+        Fuel: 40,
+        "Polymer Resin": 30,
       },
-      "in": {
-        "Crude Oil": 60
+      in: {
+        "Crude Oil": 60,
       },
-      "machine": "Oil Refinery"
+      machine: "Oil Refinery",
     },
     "Petroleum Coke": {
-      "out": {
+      out: {
         "Petroleum Coke": 120,
       },
-      "in": {
-        "Heavy Oil Residue": 40
+      in: {
+        "Heavy Oil Residue": 40,
       },
-      "machine": "Oil Refinery"
+      machine: "Oil Refinery",
     },
-    "Plastic": {
-      "out": {
-        "Plastic": 20,
-        "Heavy Oil Residue": 10
+    Plastic: {
+      out: {
+        Plastic: 20,
+        "Heavy Oil Residue": 10,
       },
-      "in": {
-        "Crude Oil": 30
+      in: {
+        "Crude Oil": 30,
       },
-      "machine": "Oil Refinery"
+      machine: "Oil Refinery",
     },
-    "Rubber": {
-      "out": {
-        "Rubber": 20,
-        "Heavy Oil Residue": 20
+    Rubber: {
+      out: {
+        Rubber: 20,
+        "Heavy Oil Residue": 20,
       },
-      "in": {
-        "Crude Oil": 30
+      in: {
+        "Crude Oil": 30,
       },
-      "machine": "Oil Refinery"
+      machine: "Oil Refinery",
     },
     "Residual Fuel": {
-      "out": {
-        "Fuel": 40,
+      out: {
+        Fuel: 40,
       },
-      "in": {
-        "Heavy Oil Residue": 60
+      in: {
+        "Heavy Oil Residue": 60,
       },
-      "machine": "Oil Refinery"
+      machine: "Oil Refinery",
     },
     "Residual Plastic": {
-      "out": {
-        "Plastic": 20,
+      out: {
+        Plastic: 20,
       },
-      "in": {
+      in: {
         "Polymer Resin": 60,
-        "Water": 20
+        Water: 20,
       },
-      "machine": "Oil Refinery"
+      machine: "Oil Refinery",
     },
     "Residual Rubber": {
-      "out": {
-        "Rubber": 20,
+      out: {
+        Rubber: 20,
       },
-      "in": {
+      in: {
         "Polymer Resin": 40,
-        "Water": 40
+        Water: 40,
       },
-      "machine": "Oil Refinery"
+      machine: "Oil Refinery",
     },
     "Alumina Solution": {
-      "out": {
+      out: {
         "Alumina Solution": 80,
-        "Silica": 20,
+        Silica: 20,
       },
-      "in": {
-        "Bauxite": 70,
-        "Water": 100
+      in: {
+        Bauxite: 70,
+        Water: 100,
       },
-      "machine": "Oil Refinery"
+      machine: "Oil Refinery",
     },
     "Aluminum Scrap": {
-      "out": {
+      out: {
         "Aluminum Scrap": 360,
         "Water Out": 30,
       },
-      "in": {
+      in: {
         "Alumina Solution": 240,
-        "Petroleum Coke": 60
+        "Petroleum Coke": 60,
       },
-      "machine": "Oil Refinery"
+      machine: "Oil Refinery",
     },
     "Uranium Pellet": {
-      "out": {
+      out: {
         "Uranium Pellet": 50,
         "Sulfuric Acid Out": 20,
       },
-      "in": {
-        "Uranium": 50,
-        "Sulfuric Acid": 80
+      in: {
+        Uranium: 50,
+        "Sulfuric Acid": 80,
       },
-      "machine": "Oil Refinery"
+      machine: "Oil Refinery",
     },
-    "Turbofuel": {
-      "out": {
-        "Turbofuel": 18.75
+    Turbofuel: {
+      out: {
+        Turbofuel: 18.75,
       },
-      "in": {
-        "Fuel": 22.5,
-        "Compacted Coal": 15
+      in: {
+        Fuel: 22.5,
+        "Compacted Coal": 15,
       },
-      "machine": "Oil Refinery"
+      machine: "Oil Refinery",
     },
     "Sulfuric Acid": {
-      "out": {
+      out: {
         "Sulfuric Acid": 100,
       },
-      "in": {
-        "Sulfur": 50,
-        "Water": 50
+      in: {
+        Sulfur: 50,
+        Water: 50,
       },
-      "machine": "Oil Refinery"
+      machine: "Oil Refinery",
     },
-  }
-}
+    "Smokeless Powder": {
+      out: {
+        "Smokeless Powder": 20,
+      },
+      in: {
+        "Black Powder": 20,
+        "Heavy Oil residue": 10,
+      },
+      machine: "Oil Refinery",
+    },
+  },
+};

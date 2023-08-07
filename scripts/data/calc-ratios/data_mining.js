@@ -1,123 +1,130 @@
 export const data_mining_rates = {
-    "recipes": {
-        "Coal": {
-            "out": {
-                "Coal": 60
+    recipes: {
+        Coal: {
+            out: {
+                Coal: 60,
             },
-            "in": {},
-            "machine": "Miner MK1"
+            in: {},
+            machine: "Miner MK1",
         },
-        "Limestone": {
-            "out": {
-                "Limestone": 60
+        Limestone: {
+            out: {
+                Limestone: 60,
             },
-            "in": {},
-            "machine": "Miner MK1"
+            in: {},
+            machine: "Miner MK1",
         },
         "Caterium Ore": {
-            "out": {
-                "Caterium Ore": 60
+            out: {
+                "Caterium Ore": 60,
             },
-            "in": {},
-            "machine": "Miner MK1"
+            in: {},
+            machine: "Miner MK1",
         },
         "Copper Ore": {
-            "out": {
-                "Copper Ore": 60
+            out: {
+                "Copper Ore": 60,
             },
-            "in": {},
-            "machine": "Miner MK1"
+            in: {},
+            machine: "Miner MK1",
         },
         "Iron Ore": {
-            "out": {
-                "Iron Ore": 60
+            out: {
+                "Iron Ore": 60,
             },
-            "in": {},
-            "machine": "Miner MK1"
+            in: {},
+            machine: "Miner MK1",
         },
-        "Uranium": {
-            "out": {
-                "Uranium": 60
+        Uranium: {
+            out: {
+                Uranium: 60,
             },
-            "in": {},
-            "machine": "Miner MK1"
+            in: {},
+            machine: "Miner MK1",
         },
         "Raw Quartz": {
-            "out": {
-                "Raw Quartz": 60
+            out: {
+                "Raw Quartz": 60,
             },
-            "in": {},
-            "machine": "Miner MK1"
+            in: {},
+            machine: "Miner MK1",
         },
-        "Sulfur": {
-            "out": {
-                "Sulfur": 60
+        Sulfur: {
+            out: {
+                Sulfur: 60,
             },
-            "in": {},
-            "machine": "Miner MK1"
+            in: {},
+            machine: "Miner MK1",
         },
-        "Leaves": {
-            "out": {
-                "Leaves": 60
+        Leaves: {
+            out: {
+                Leaves: 60,
             },
-            "in": {},
-            "machine": "Conveyor Belt"
+            in: {},
+            machine: "Conveyor Belt",
         },
-        "Wood": {
-            "out": {
-                "Wood": 60
+        Wood: {
+            out: {
+                Wood: 60,
             },
-            "in": {},
-            "machine": "Conveyor Belt"
+            in: {},
+            machine: "Conveyor Belt",
         },
-        "Bauxite": {
-            "out": {
-                "Bauxite": 60
+        Bauxite: {
+            out: {
+                Bauxite: 60,
             },
-            "in": {},
-            "machine": "Miner MK1"
+            in: {},
+            machine: "Miner MK1",
         },
         "Crude Oil": {
-            "out": {
-                "Crude Oil": 120
+            out: {
+                "Crude Oil": 120,
             },
-            "in": {},
-            "machine": "Oil Pump"
+            in: {},
+            machine: "Oil Pump",
         },
-        "Water": {
-            "out": {
-                "Water": 120
+        Water: {
+            out: {
+                Water: 120,
             },
-            "in": {},
-            "machine": "Water Extractor"
+            in: {},
+            machine: "Water Extractor",
         },
         "Water Out": {
-            "out": {
-                "Water": 300
+            out: {
+                Water: 300,
             },
-            "in": {},
-            "machine": "Pipeline"
+            in: {},
+            machine: "Pipeline",
         },
         "Sulfuric Acid Out": {
-            "out": {
-                "Sulfuric Acid": 300
+            out: {
+                "Sulfuric Acid": 300,
             },
-            "in": {},
-            "machine": "Pipeline"
+            in: {},
+            machine: "Pipeline",
         },
         "Heavy Oil Residue": {
-            "out": {
-                "Heavy Oil Residue": 300
+            out: {
+                "Heavy Oil Residue": 300,
             },
-            "in": {},
-            "machine": "Pipeline"
+            in: {},
+            machine: "Pipeline",
         },
         "Polymer Resin": {
-            "out": {
-                "Polymer Resin": 60
+            out: {
+                "Polymer Resin": 60,
             },
-            "in": {},
-            "machine": "Conveyor Belt"
+            in: {},
+            machine: "Conveyor Belt",
         },
-    }
+        "Nitrogen Gas": {
+            out: {
+                "Nitrogen Gas": 300,
+            },
+            in: {},
+            machine: "Pipeline",
+        },
+    },
 };

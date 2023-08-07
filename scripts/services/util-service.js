@@ -1,4 +1,15 @@
 import { iconUrlMap } from "../icon_url_map.js";
+const sf_calc_icons = [
+    "Copper Sheet",
+    "Solid Biofuel",
+    "Non Fissile Uranium",
+    "Nitric Acid",
+    "Plutonium Pellet",
+    "Nuclear Pasta",
+    "Encased Plutonium Cell",
+    "Plutonium Fuel Rod",
+    "Plutonium Waste",
+];
 /** Common functions for links */
 export class UtilService {
     /**
@@ -22,21 +33,22 @@ export class UtilService {
         return elIcon;
     }
     static getKirkLink(item, count) {
-        return `https://kirkmcdonald.github.io/satisfactory-calculator/calc.html#tab=totals&items=${item.replace(/[_ ]/g, "-").toLowerCase()}:f:${count}`;
+        return `https://kirkmcdonald.github.io/satisfactory-calculator/calc.html#tab=totals&items=${item
+            .replace(/[_ ]/g, "-")
+            .toLowerCase()}:f:${count}`;
     }
     /**
      * @return url string
      * @param {String} name
      */
     static getSfIconPath(name) {
-        if (name.includes("Copper Sheet") ||
-            name.includes("Solid Biofuel")) {
+        if (sf_calc_icons.includes(name)) {
             return "https://static.satisfactory-calculator.com/img/gameUI/IconDesc_" + name.replace(/ /g, "") + "_256.png";
         }
         else if (Object.keys(iconUrlMap).includes(name)) {
-            return Object.entries(iconUrlMap).find(([k, v]) => {
+            return (Object.entries(iconUrlMap).find(([k, v]) => {
                 return k.includes(name);
-            })?.[1] || '';
+            })?.[1] || "");
         }
         return "https://kirkmcdonald.github.io/satisfactory-calculator/images/" + name + ".png";
     }

@@ -7,7 +7,10 @@ import { data_refining_rates } from "./data/calc-ratios/data_refining.js";
 import { data_smelting_rates } from "./data/calc-ratios/data_smelting.js";
 import { data_common_ratios } from "./data/data_chained-ratios.js";
 import { RatioRenderService } from "./services/ratio-render-service.js";
-import { UtilService } from './services/util-service.js';
+import { data_blending_rates } from "./data/calc-ratios/data_blending.js";
+import { data_accelerator_rates } from "./data/calc-ratios/data_accelerator.js";
+import { data_nuclear_rates } from "./data/calc-ratios/data_nuclear.js";
+import { UtilService } from "./services/util-service.js";
 import { data_links } from "./data/data_links.js";
 // Constants
 const elRootCalculatedRatios = document.getElementById("CalculatedRatios");
@@ -25,7 +28,7 @@ function onInit() {
 }
 function renderLinkData(data) {
     const elUlLinks = document.createElement("ul");
-    data.forEach(elLink => {
+    data.forEach((elLink) => {
         const elaLink = UtilService.getExternalLinkEl(elLink.url);
         elaLink.innerHTML = elLink.text;
         const elLiLink = document.createElement("li");
@@ -34,22 +37,33 @@ function renderLinkData(data) {
     });
     elRootLinks.appendChild(elUlLinks);
 }
-function renderBeltData() {
-}
+function renderBeltData() { }
 function renderRatioData() {
-    if (typeof data_common_ratios === 'undefined' || data_common_ratios === null) {
+    if (typeof data_common_ratios === "undefined" || data_common_ratios === null) {
         console.error("Error: data is null...");
     }
     else {
         // elRootChainedRatios.innerHTML = "";
         renderChainedRatios();
     }
-    if (typeof data_mining_rates === 'undefined' || data_mining_rates === null ||
-        typeof data_smelting_rates === 'undefined' || data_smelting_rates === null ||
-        typeof data_refining_rates === 'undefined' || data_refining_rates === null ||
-        typeof data_construction_rates === 'undefined' || data_construction_rates === null ||
-        typeof data_assembly_rates === 'undefined' || data_assembly_rates === null ||
-        typeof data_manufacturing_rates === 'undefined' || data_manufacturing_rates === null) {
+    if (typeof data_mining_rates === "undefined" ||
+        data_mining_rates === null ||
+        typeof data_smelting_rates === "undefined" ||
+        data_smelting_rates === null ||
+        typeof data_refining_rates === "undefined" ||
+        data_refining_rates === null ||
+        typeof data_construction_rates === "undefined" ||
+        data_construction_rates === null ||
+        typeof data_assembly_rates === "undefined" ||
+        data_assembly_rates === null ||
+        typeof data_manufacturing_rates === "undefined" ||
+        data_manufacturing_rates === null ||
+        typeof data_blending_rates === "undefined" ||
+        data_blending_rates === null ||
+        typeof data_accelerator_rates === "undefined" ||
+        data_accelerator_rates === null ||
+        typeof data_nuclear_rates === "undefined" ||
+        data_nuclear_rates === null) {
         console.error("Error: data is null...");
     }
     else {
@@ -61,6 +75,9 @@ function renderRatioData() {
         Object.assign(rawData, data_construction_rates.recipes);
         Object.assign(rawData, data_assembly_rates.recipes);
         Object.assign(rawData, data_manufacturing_rates.recipes);
+        Object.assign(rawData, data_blending_rates.recipes);
+        Object.assign(rawData, data_accelerator_rates.recipes);
+        Object.assign(rawData, data_nuclear_rates.recipes);
         // console.log(rawData);
         // Generate list
         renderCalculatedRatios();
@@ -73,19 +90,26 @@ function renderChainedRatios() {
 }
 function renderCalculatedRatios() {
     let data = [];
-    data = parseData(data_smelting_rates.recipes, 'Smelting Rates');
-    renderServiceCalculatedRatios.render(data, 'Smelting Rates');
-    data = parseData(data_construction_rates.recipes, 'Construction Rates');
-    renderServiceCalculatedRatios.render(data, 'Construction Rates');
-    data = parseData(data_assembly_rates.recipes, 'Assembly Rates');
-    renderServiceCalculatedRatios.render(data, 'Assembly Rates');
-    data = parseData(data_manufacturing_rates.recipes, 'Manufacturing Rates');
-    renderServiceCalculatedRatios.render(data, 'Manufacturing Rates');
-    data = parseData(data_refining_rates.recipes, 'Refining Rates');
-    renderServiceCalculatedRatios.render(data, 'Refining Rates');
+    data = parseData(data_smelting_rates.recipes, "Smelter Rates");
+    renderServiceCalculatedRatios.render(data, "Smelter Rates");
+    data = parseData(data_construction_rates.recipes, "Constructor Rates");
+    renderServiceCalculatedRatios.render(data, "Constructor Rates");
+    data = parseData(data_assembly_rates.recipes, "Assembler Rates");
+    renderServiceCalculatedRatios.render(data, "Assembler Rates");
+    data = parseData(data_manufacturing_rates.recipes, "Manufacturer Rates");
+    renderServiceCalculatedRatios.render(data, "Manufacturer Rates");
+    data = parseData(data_refining_rates.recipes, "Refiner Rates");
+    renderServiceCalculatedRatios.render(data, "Refiner Rates");
+    data = parseData(data_blending_rates.recipes, "Refiner Rates");
+    renderServiceCalculatedRatios.render(data, "Blender Rates");
+    data = parseData(data_accelerator_rates.recipes, "Particle Accelerator Rates");
+    renderServiceCalculatedRatios.render(data, "Particle Accelerator Rates");
+    data = parseData(data_nuclear_rates.recipes, "Nuclear Rates");
+    renderServiceCalculatedRatios.render(data, "Nuclear Rates");
 }
 function parseData(rawDataIn, name) {
-    // console.log(`____________ Parse ${name} _______________`)
+    // console.log(`____________ Parse ${name} _______________`);
+    // console.log(rawDataIn);
     let data = [];
     let piSet = [];
     let piRatio;
@@ -101,17 +125,19 @@ function parseData(rawDataIn, name) {
         piSet.push({
             name: Object.keys(v.out)[0],
             count: 1,
-            machine: v.machine
+            machine: v.machine,
         });
-        const ratesRequired = Object.entries(v.in).map(([k, v]) => (v * multiplier));
+        const ratesRequired = Object.entries(v.in).map(([k, v]) => v * multiplier);
         const ratesProvided = [];
+        // console.log((v as Product).in);
         // Ins
         Object.entries(v.in).forEach(([item, irr]) => {
             // console.log(`----- ${item} -----`);
             let itemRequiredRate = irr;
             let reqItem = rawData[item] || rawData[UtilService.getHrName(item)];
+            // console.log(item, reqItem);
             if (!reqItem) {
-                const key = Object.keys(rawData).find(k => k.includes(item) || k.includes(UtilService.getHrName(item)));
+                const key = Object.keys(rawData).find((k) => k.includes(item) || k.includes(UtilService.getHrName(item)));
                 if (key) {
                     reqItem = rawData[key];
                 }
@@ -124,7 +150,7 @@ function parseData(rawDataIn, name) {
             piSet.push({
                 name: item,
                 count: 1,
-                machine: reqItem.machine
+                machine: reqItem.machine,
             });
         });
         // console.log("Req rates:");
@@ -146,8 +172,8 @@ function parseData(rawDataIn, name) {
         // console.log(piSet);
         // Push set
         data.push({
-            link: '',
-            productionItems: piSet
+            link: "",
+            productionItems: piSet,
         });
         // console.log('\n');
     });
@@ -161,10 +187,10 @@ function getRatioCompound(ratioA, ratioB) {
     // console.log(`lcm: ${lcm}`);
     const ratio = [lcm];
     for (let i = 1; i < ratioA.length; i++) {
-        ratio.push(lcm / ratioA[0] * ratioA[i]);
+        ratio.push((lcm / ratioA[0]) * ratioA[i]);
     }
     for (let i = 1; i < ratioB.length; i++) {
-        ratio.push(lcm / ratioB[0] * ratioB[i]);
+        ratio.push((lcm / ratioB[0]) * ratioB[i]);
     }
     // return [lcm, ...ratioA.map(n=>lcm/n*ratioB[0])]
     return ratio;

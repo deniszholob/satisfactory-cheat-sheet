@@ -47,5 +47,14 @@ export const data_smelting_rates = {
             },
             "machine": "foundry"
         },
+        // "Aluminum Ingot Alt": {
+        //   "out": {
+        //     "Aluminum Ingot": 45
+        //   },
+        //   "in": {
+        //     "Aluminum Scrap": 45,
+        //   },
+        //   "machine": "smelter"
+        // }
     }
 };

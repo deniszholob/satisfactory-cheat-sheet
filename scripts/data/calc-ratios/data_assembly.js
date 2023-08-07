@@ -1,184 +1,214 @@
 export const data_assembly_rates = {
-    "recipes": {
+    recipes: {
         "Reinforced Iron Plate": {
-            "out": {
-                "Reinforced Iron Plate": 5
+            out: {
+                "Reinforced Iron Plate": 5,
             },
-            "in": {
-                "iron_plate": 30,
-                "screw": 60,
+            in: {
+                iron_plate: 30,
+                screw: 60,
             },
-            "machine": "assembler"
+            machine: "assembler",
         },
         "Circuit Board": {
-            "out": {
-                "Circuit Board": 7.5
+            out: {
+                "Circuit Board": 7.5,
             },
-            "in": {
-                "copper_sheet": 15,
-                "plastic": 30,
+            in: {
+                copper_sheet: 15,
+                plastic: 30,
             },
-            "machine": "assembler"
+            machine: "assembler",
         },
-        "modular_frame": {
-            "out": {
-                "modular_frame": 2
+        modular_frame: {
+            out: {
+                modular_frame: 2,
             },
-            "in": {
-                "reinforced_iron_plate": 3,
-                "iron_rod": 12,
+            in: {
+                reinforced_iron_plate: 3,
+                iron_rod: 12,
             },
-            "machine": "assembler"
+            machine: "assembler",
         },
-        "rotor": {
-            "out": {
-                "rotor": 4
+        rotor: {
+            out: {
+                rotor: 4,
             },
-            "in": {
-                "iron_rod": 20,
-                "screw": 100,
+            in: {
+                iron_rod: 20,
+                screw: 100,
             },
-            "machine": "assembler"
+            machine: "assembler",
         },
         "Smart Plating": {
-            "out": {
-                "Smart Plating": 2
+            out: {
+                "Smart Plating": 2,
             },
-            "in": {
-                "reinforced_iron_plate": 2,
-                "rotor": 2,
+            in: {
+                reinforced_iron_plate: 2,
+                rotor: 2,
             },
-            "machine": "assembler"
+            machine: "assembler",
         },
         "Alclad Aluminum Sheet": {
-            "out": {
-                "Alclad Aluminum Sheet": 30
+            out: {
+                "Alclad Aluminum Sheet": 30,
             },
-            "in": {
+            in: {
                 "Aluminum Ingot": 60,
                 "Copper Ingot": 22.5,
             },
-            "machine": "assembler"
+            machine: "assembler",
         },
         "Encased Industrial Beam": {
-            "out": {
-                "Encased industrial Beam": 6
+            out: {
+                "Encased industrial Beam": 6,
             },
-            "in": {
-                "steel_beam": 24,
-                "concrete": 30,
+            in: {
+                steel_beam: 24,
+                concrete: 30,
             },
-            "machine": "assembler"
+            machine: "assembler",
         },
-        "Motor": {
-            "out": {
-                "Motor": 5
+        Motor: {
+            out: {
+                Motor: 5,
             },
-            "in": {
-                "rotor": 10,
-                "stator": 10,
+            in: {
+                rotor: 10,
+                stator: 10,
             },
-            "machine": "assembler"
+            machine: "assembler",
         },
-        "Stator": {
-            "out": {
-                "Stator": 5
+        Stator: {
+            out: {
+                Stator: 5,
             },
-            "in": {
-                "steel_pipe": 15,
-                "wire": 40,
+            in: {
+                steel_pipe: 15,
+                wire: 40,
             },
-            "machine": "assembler"
+            machine: "assembler",
         },
         "Automated Wiring": {
-            "out": {
-                "Automated Wiring": 2.5
+            out: {
+                "Automated Wiring": 2.5,
             },
-            "in": {
-                "stator": 2.5,
-                "cable": 50,
+            in: {
+                stator: 2.5,
+                cable: 50,
             },
-            "machine": "assembler"
+            machine: "assembler",
         },
-        "A.I. Limiter": {
-            "out": {
-                "A.I. Limiter": 5
+        "Assembly Director System": {
+            out: {
+                "Assembly Director System": 0.75,
             },
-            "in": {
-                "copper_sheet": 25,
-                "quickwire": 100,
+            in: {
+                "Adaptive Control Unit": 1.5,
+                Supercomputer: 0.75,
             },
-            "machine": "assembler"
-        },
-        "versatile_framework": {
-            "out": {
-                "versatile_framework": 5
-            },
-            "in": {
-                "modular_frame": 2.5,
-                "steel_beam": 30,
-            },
-            "machine": "assembler"
-        },
-        "Compacted Coal": {
-            "out": {
-                "Compacted Coal": 25
-            },
-            "in": {
-                "Coal": 25,
-                "Sulfur": 25,
-            },
-            "machine": "assembler"
+            machine: "assembler",
         },
         "Electromagnetic Control Rod": {
-            "out": {
-                "Electromagnetic Control Rod": 4
+            out: {
+                "Electromagnetic Control Rod": 4,
             },
-            "in": {
-                "Stator": 6,
+            in: {
+                stator: 6,
                 "A.I. Limiter": 4,
             },
-            "machine": "assembler"
+            machine: "assembler",
+        },
+        "A.I. Limiter": {
+            out: {
+                "A.I. Limiter": 5,
+            },
+            in: {
+                copper_sheet: 25,
+                quickwire: 100,
+            },
+            machine: "assembler",
+        },
+        "Versatile Framework": {
+            out: {
+                "Versatile Framework": 5,
+            },
+            in: {
+                modular_frame: 2.5,
+                steel_beam: 30,
+            },
+            machine: "assembler",
+        },
+        "Compacted Coal": {
+            out: {
+                "Compacted Coal": 25,
+            },
+            in: {
+                Coal: 25,
+                Sulfur: 25,
+            },
+            machine: "assembler",
         },
         "Encased Uranium Cell": {
-            "out": {
-                "Encased Uranium Cell": 10
+            out: {
+                "Encased Uranium Cell": 10,
             },
-            "in": {
+            in: {
                 "Uranium Pellet": 40,
-                "Concrete": 9,
+                Concrete: 9,
             },
-            "machine": "assembler"
+            machine: "assembler",
+        },
+        "Encased Plutonium Cell": {
+            out: {
+                "Encased Plutonium Cell": 5,
+            },
+            in: {
+                "Plutonium Pellet": 10,
+                Concrete: 20,
+            },
+            machine: "Manufacturer",
         },
         "Heat Sink": {
-            "out": {
-                "Heat Sink": 10
+            out: {
+                "Heat Sink": 10,
             },
-            "in": {
+            in: {
                 "Alclad Aluminum Sheet": 40,
-                "Rubber": 70,
+                Rubber: 70,
             },
-            "machine": "assembler"
+            machine: "assembler",
         },
-        "nobelisk": {
-            "out": {
-                "nobelisk": 3
+        nobelisk: {
+            out: {
+                nobelisk: 3,
             },
-            "in": {
-                "black_powder": 15,
-                "steel_pipe": 30,
+            in: {
+                black_powder: 15,
+                steel_pipe: 30,
             },
-            "machine": "assembler"
+            machine: "assembler",
         },
         "Black Powder": {
-            "out": {
-                "Black Powder": 7.5
+            out: {
+                "Black Powder": 7.5,
             },
-            "in": {
-                "coal": 7.5,
-                "sulfur": 15,
+            in: {
+                coal: 7.5,
+                sulfur: 15,
             },
-            "machine": "assembler"
+            machine: "assembler",
         },
-    }
+        "Pressure Conversion Cube": {
+            out: {
+                "Pressure Conversion Cube": 1,
+            },
+            in: {
+                "Fused Modular Frame": 1,
+                "Radio Control Unit": 2,
+            },
+            machine: "assembler",
+        },
+    },
 };

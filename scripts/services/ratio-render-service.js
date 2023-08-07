@@ -1,4 +1,4 @@
-import { UtilService } from './util-service.js';
+import { UtilService } from "./util-service.js";
 /** Renders out the blueprint entries in a list */
 export class RatioRenderService {
     /**
@@ -17,9 +17,9 @@ export class RatioRenderService {
             }
         });
         if (title && title.length > 0) {
-            const elTitle = document.createElement('h4');
-            elTitle.innerHTML = title || '';
-            elTitle.className = 'text-center full-width';
+            const elTitle = document.createElement("h4");
+            elTitle.innerHTML = title || "";
+            elTitle.className = "text-center full-width";
             this.elRoot.appendChild(elTitle);
         }
         this.elRoot.appendChild(elRatios_1);
@@ -32,15 +32,17 @@ export class RatioRenderService {
 function renderDataPoint(data) {
     // Do not render empty values
     if (data.productionItems && data.productionItems.length > 0) {
-        const link = data.link ? data.link : UtilService.getKirkLink(data.productionItems[0].name, data.productionItems[0].count);
+        const link = data.link
+            ? data.link
+            : UtilService.getKirkLink(data.productionItems[0].name, data.productionItems[0].count);
         const elLink = UtilService.getExternalLinkEl(link);
         elLink.classList.value = "list-group-item";
         data.productionItems.forEach((item) => {
-            const elItemIcon = UtilService.getSfIconProductionItem(item.name, item.machine, item.count);
+            const elItemIcon = UtilService.getSfIconProductionItem(item.name, item.machine, Math.trunc(item.count));
             elLink.appendChild(elItemIcon);
         });
         if (data.trueRatio === false) {
-            const elNote = document.createElement('span');
+            const elNote = document.createElement("span");
             elNote.innerHTML = "*Approximate";
             elLink.appendChild(elNote);
         }
