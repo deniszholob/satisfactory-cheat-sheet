@@ -255,7 +255,7 @@ export const data_common_ratios = {
             "productionItems": [
                 {
                     "name": "Alumina Solution",
-                    "machine": "Oil Refinery",
+                    "machine": "Refinery",
                     "count": 2
                 },
                 {
@@ -275,12 +275,12 @@ export const data_common_ratios = {
             "productionItems": [
                 {
                     "name": "Aluminum Scrap",
-                    "machine": "Oil Refinery",
+                    "machine": "Refinery",
                     "count": 1
                 },
                 {
                     "name": "Alumina Solution",
-                    "machine": "Oil Refinery",
+                    "machine": "Refinery",
                     "count": 2
                 },
                 {
@@ -300,7 +300,7 @@ export const data_common_ratios = {
                 },
                 {
                     "name": "Aluminum Scrap",
-                    "machine": "Oil Refinery",
+                    "machine": "Refinery",
                     "count": 1
                 },
                 {

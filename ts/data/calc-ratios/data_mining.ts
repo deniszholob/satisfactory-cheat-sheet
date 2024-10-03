@@ -70,9 +70,23 @@ export const data_mining_rates: any = {
       in: {},
       machine: "Conveyor Belt",
     },
+    "Hog Remains": {
+      out: {
+        "Hog Remains": 60,
+      },
+      in: {},
+      machine: "Conveyor Belt",
+    },
     Bauxite: {
       out: {
         Bauxite: 60,
+      },
+      in: {},
+      machine: "Miner MK1",
+    },
+    SAM: {
+      out: {
+        SAM: 60,
       },
       in: {},
       machine: "Miner MK1",
@@ -82,7 +96,7 @@ export const data_mining_rates: any = {
         "Crude Oil": 120,
       },
       in: {},
-      machine: "Oil Pump",
+      machine: "Oil Extractor",
     },
     Water: {
       out: {

@@ -8,7 +8,7 @@ export const data_refining_rates = {
             in: {
                 "Crude Oil": 60,
             },
-            machine: "Oil Refinery",
+            machine: "Refinery",
         },
         "Petroleum Coke": {
             out: {
@@ -17,7 +17,7 @@ export const data_refining_rates = {
             in: {
                 "Heavy Oil Residue": 40,
             },
-            machine: "Oil Refinery",
+            machine: "Refinery",
         },
         Plastic: {
             out: {
@@ -27,7 +27,7 @@ export const data_refining_rates = {
             in: {
                 "Crude Oil": 30,
             },
-            machine: "Oil Refinery",
+            machine: "Refinery",
         },
         Rubber: {
             out: {
@@ -37,7 +37,7 @@ export const data_refining_rates = {
             in: {
                 "Crude Oil": 30,
             },
-            machine: "Oil Refinery",
+            machine: "Refinery",
         },
         "Residual Fuel": {
             out: {
@@ -46,7 +46,7 @@ export const data_refining_rates = {
             in: {
                 "Heavy Oil Residue": 60,
             },
-            machine: "Oil Refinery",
+            machine: "Refinery",
         },
         "Residual Plastic": {
             out: {
@@ -56,7 +56,7 @@ export const data_refining_rates = {
                 "Polymer Resin": 60,
                 Water: 20,
             },
-            machine: "Oil Refinery",
+            machine: "Refinery",
         },
         "Residual Rubber": {
             out: {
@@ -66,40 +66,29 @@ export const data_refining_rates = {
                 "Polymer Resin": 40,
                 Water: 40,
             },
-            machine: "Oil Refinery",
+            machine: "Refinery",
         },
         "Alumina Solution": {
             out: {
-                "Alumina Solution": 80,
-                Silica: 20,
+                "Alumina Solution": 120,
+                Silica: 50,
             },
             in: {
-                Bauxite: 70,
-                Water: 100,
+                Bauxite: 120,
+                Water: 180,
             },
-            machine: "Oil Refinery",
+            machine: "Refinery",
         },
         "Aluminum Scrap": {
             out: {
                 "Aluminum Scrap": 360,
-                "Water Out": 30,
+                "Water Out": 120,
             },
             in: {
                 "Alumina Solution": 240,
-                "Petroleum Coke": 60,
+                "Coal": 120,
             },
-            machine: "Oil Refinery",
-        },
-        "Uranium Pellet": {
-            out: {
-                "Uranium Pellet": 50,
-                "Sulfuric Acid Out": 20,
-            },
-            in: {
-                Uranium: 50,
-                "Sulfuric Acid": 80,
-            },
-            machine: "Oil Refinery",
+            machine: "Refinery",
         },
         Turbofuel: {
             out: {
@@ -109,17 +98,17 @@ export const data_refining_rates = {
                 Fuel: 22.5,
                 "Compacted Coal": 15,
             },
-            machine: "Oil Refinery",
+            machine: "Refinery",
         },
         "Sulfuric Acid": {
             out: {
-                "Sulfuric Acid": 100,
+                "Sulfuric Acid": 50,
             },
             in: {
                 Sulfur: 50,
                 Water: 50,
             },
-            machine: "Oil Refinery",
+            machine: "Refinery",
         },
         "Smokeless Powder": {
             out: {
@@ -129,7 +118,17 @@ export const data_refining_rates = {
                 "Black Powder": 20,
                 "Heavy Oil residue": 10,
             },
-            machine: "Oil Refinery",
+            machine: "Refinery",
+        },
+        "Polyester Fabric": {
+            out: {
+                "Fabric": 30,
+            },
+            in: {
+                "Polymer Resin": 30,
+                "Water": 30,
+            },
+            machine: "Refinery",
         },
     },
 };

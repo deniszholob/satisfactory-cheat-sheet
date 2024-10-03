@@ -1,28 +1,5 @@
-export const data_blending_rates = {
+export const data_blender_rates = {
     recipes: {
-        "Cooling System": {
-            out: {
-                "Cooling System": 6,
-            },
-            in: {
-                "Heat Sink": 12,
-                Rubber: 12,
-                Water: 30,
-                "Nitrogen Gas": 150,
-            },
-            machine: "Blender",
-        },
-        "Fused Modular Frame": {
-            out: {
-                "Fused Modular Frame": 1.5,
-            },
-            in: {
-                "Heavy Modular Frame": 1.5,
-                "Aluminum Casing": 75,
-                "Nitrogen Gas": 37.5,
-            },
-            machine: "Blender",
-        },
         Battery: {
             out: {
                 Battery: 20,
@@ -35,6 +12,29 @@ export const data_blending_rates = {
             },
             machine: "Blender",
         },
+        "Biochemical Sculptor": {
+            out: {
+                "Biochemical Sculptor": 2,
+            },
+            in: {
+                "Assembly Director System": 0.5,
+                "Ficsite Trigon": 40,
+                "Water": 10,
+            },
+            machine: "Blender",
+        },
+        "Cooling System": {
+            out: {
+                "Cooling System": 6,
+            },
+            in: {
+                "Heat Sink": 12,
+                Rubber: 12,
+                Water: 30,
+                "Nitrogen Gas": 150,
+            },
+            machine: "Blender",
+        },
         "Encased Uranium Cell": {
             out: {
                 "Encased Uranium Cell": 25,
@@ -44,6 +44,17 @@ export const data_blending_rates = {
                 Uranium: 50,
                 Concrete: 15,
                 "Sulfuric Acid": 40,
+            },
+            machine: "Blender",
+        },
+        "Fused Modular Frame": {
+            out: {
+                "Fused Modular Frame": 1.5,
+            },
+            in: {
+                "Heavy Modular Frame": 1.5,
+                "Aluminum Casing": 75,
+                "Nitrogen Gas": 37.5,
             },
             machine: "Blender",
         },
@@ -68,6 +79,17 @@ export const data_blending_rates = {
                 Silica: 25,
                 "Nitric Acid": 15,
                 "Sulfuric Acid": 15,
+            },
+            machine: "Blender",
+        },
+        "Rocket Fuel": {
+            out: {
+                "Rocket Fuel": 100,
+                "Compacted Coal": 10,
+            },
+            in: {
+                Turbofuel: 60,
+                "Nitric Acid": 10,
             },
             machine: "Blender",
         },

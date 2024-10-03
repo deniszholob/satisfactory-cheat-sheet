@@ -1,28 +1,5 @@
 export const data_manufacturing_rates: any = {
   recipes: {
-    Computer: {
-      out: {
-        Computer: 2.5,
-      },
-      in: {
-        "Circuit Board": 25,
-        Cable: 22.5,
-        Plastic: 45,
-        Screw: 130,
-      },
-      machine: "Manufacturer",
-    },
-    "Modular Engine": {
-      out: {
-        "Modular Engine": 1,
-      },
-      in: {
-        Motor: 2,
-        Rubber: 15,
-        "Smart Plating": 2,
-      },
-      machine: "Manufacturer",
-    },
     "Adaptive Control Unit": {
       out: {
         "Adaptive Control Unit": 1,
@@ -35,15 +12,26 @@ export const data_manufacturing_rates: any = {
       },
       machine: "Manufacturer",
     },
-    "Heavy Modular Frame": {
+    "Ballistic Warp Drive": {
       out: {
-        "Heavy Modular Frame": 2,
+        "Ballistic Warp Drive": 1,
       },
       in: {
-        "Modular Frame": 10,
-        "Steel Pipe": 30,
-        "Encased Industrial Beam": 10,
-        Screw: 200,
+        "Thermal Propulsion Rocket": 1,
+        "Singularity Cell": 5,
+        "Superposition Oscillator": 2,
+        "Dark Matter Crystal": 40,
+      },
+      machine: "Manufacturer",
+    },
+    Computer: {
+      out: {
+        Computer: 2.5,
+      },
+      in: {
+        "Circuit Board": 10,
+        Cable: 20,
+        Plastic: 40,
       },
       machine: "Manufacturer",
     },
@@ -58,14 +46,37 @@ export const data_manufacturing_rates: any = {
       },
       machine: "Manufacturer",
     },
-    "Uranium Fuel Rod": {
+    "Explosive Rebar": {
       out: {
-        "Uranium Fuel Rod": 0.4,
+        "Explosive Rebar": 5,
       },
       in: {
-        "Encased Uranium Cell": 10,
-        "Encased Industrial Beam": 1.2,
-        "Electromagnetic Control Rod": 2,
+        "Iron Rebar": 10,
+        "Smokeless Powder": 10,
+        "Steel Pipe": 10,
+      },
+      machine: "Manufacturer",
+    },
+    "Gas Filter": {
+      out: {
+        "Gas Filter": 7.5,
+      },
+      in: {
+        "Fabric": 15,
+        "Coal": 30,
+        "Iron Plate": 15,
+      },
+      machine: "Manufacturer",
+    },
+    "Heavy Modular Frame": {
+      out: {
+        "Heavy Modular Frame": 2,
+      },
+      in: {
+        "Modular Frame": 10,
+        "Steel Pipe": 40,
+        "Encased Industrial Beam": 10,
+        Screw: 240,
       },
       machine: "Manufacturer",
     },
@@ -80,73 +91,37 @@ export const data_manufacturing_rates: any = {
       },
       machine: "Manufacturer",
     },
-    Supercomputer: {
+    "Iodine-Infused Filter": {
       out: {
-        Supercomputer: 1.875,
+        "Iodine-Infused Filter": 3.75,
       },
       in: {
-        Computer: 3.75,
-        "A.I. Limiter": 3.75,
-        "High-Speed Connector": 5.625,
-        Plastic: 52.5,
+        "Gas Filter": 3.75,
+        "Quickwire": 30,
+        "Aluminum Casing": 3.75,
       },
       machine: "Manufacturer",
     },
-    "Rifle Cartridge": {
+    "Modular Engine": {
       out: {
-        Cartridge: 15,
+        "Modular Engine": 1,
       },
       in: {
-        Beacon: 3,
-        "Steel Pipe": 30,
-        "Black Powder": 30,
-        Rubber: 30,
+        Motor: 2,
+        Rubber: 15,
+        "Smart Plating": 2,
       },
       machine: "Manufacturer",
     },
-    Beacon: {
+    "Nuke Nobelisk": {
       out: {
-        Beacon: 7.5,
+        "Nuke Nobelisk": 0.5,
       },
       in: {
-        "Iron Plate": 22.5,
-        "Iron Rod": 7.5,
-        Wire: 112.5,
-        Cable: 15,
-      },
-      machine: "Manufacturer",
-    },
-    "Radio Control Unit": {
-      out: {
-        "Radio Control Unit": 2.5,
-      },
-      in: {
-        "Aluminum Casing": 22.5,
-        "Crystal Oscillator": 1.25,
-        Computer: 1.25,
-      },
-      machine: "Manufacturer",
-    },
-    "Magnetic Field Generator": {
-      out: {
-        "Magnetic Field Generator": 1,
-      },
-      in: {
-        "Versatile Framework": 2.5,
-        "Electromagnetic Control Rod": 1,
-        Battery: 5,
-      },
-      machine: "Manufacturer",
-    },
-    "Turbo Motor": {
-      out: {
-        "Turbo Motor": 1.88,
-      },
-      in: {
-        "Cooling System": 7.5,
-        "Radio Control Unit": 3.75,
-        Motor: 7.5,
-        Rubber: 45,
+        Nobelisk: 2.5,
+        "Encased Uranium Cell": 10,
+        "Smokeless Powder": 5,
+        "AI Limiter": 3,
       },
       machine: "Manufacturer",
     },
@@ -156,11 +131,104 @@ export const data_manufacturing_rates: any = {
       },
       in: {
         "Encased Plutonium Cell": 7.5,
-        "Electromagnetic Control Rod": 1.5,
         "Steel Beam": 4.5,
+        "Electromagnetic Control Rod": 1.5,
         "Heat Sink": 2.5,
       },
       machine: "Manufacturer",
     },
+    "Radio Control Unit": {
+      out: {
+        "Radio Control Unit": 2.5,
+      },
+      in: {
+        "Aluminum Casing": 40,
+        "Crystal Oscillator": 1.25,
+        Computer: 2.5,
+      },
+      machine: "Manufacturer",
+    },
+    "SAM Fluctuator": {
+      out: {
+        "SAM Fluctuator": 10,
+      },
+      in: {
+        "Reanimated SAM": 60,
+        "Wire": 50,
+        "Steel Pipe": 30,
+      },
+      machine: "Manufacturer",
+    },
+    "Singularity Cell": {
+      out: {
+        "Singularity Cell": 10,
+      },
+      in: {
+        "Nuclear Pasta": 1,
+        "Dark Matter Crystal": 20,
+        "Iron Plate": 100,
+        "Concrete": 200,
+      },
+      machine: "Manufacturer",
+    },
+    Supercomputer: {
+      out: {
+        Supercomputer: 1.875,
+      },
+      in: {
+        Computer: 7.5,
+        "AI Limiter": 3.75,
+        "High-Speed Connector": 5.625,
+        Plastic: 52.5,
+      },
+      machine: "Manufacturer",
+    },
+    "Thermal Propulsion Rocket": {
+      out: {
+        "Thermal Propulsion Rocket": 1,
+      },
+      in: {
+        "Modular Engine": 2.5,
+        "Turbo Motor": 1,
+        "Cooling System": 3,
+        "Fused Modular Frame": 1,
+      },
+      machine: "Manufacturer",
+    },
+    "Turbo Motor": {
+      out: {
+        "Turbo Motor": 1.875,
+      },
+      in: {
+        "Cooling System": 7.5,
+        "Radio Control Unit": 3.75,
+        "Motor": 7.5,
+        "Rubber": 45,
+      },
+      machine: "Manufacturer",
+    },
+    "Turbo Rifle Ammo": {
+      out: {
+        "Turbo Rifle Ammo": 250,
+      },
+      in: {
+        "Rifle Ammo": 125,
+        "Aluminum Casing": 15,
+        "Packaged Turbofuel": 15,
+      },
+      machine: "Manufacturer",
+    },
+    "Uranium Fuel Rod": {
+      out: {
+        "Uranium Fuel Rod": 0.4,
+      },
+      in: {
+        "Encased Uranium Cell": 20,
+        "Encased Industrial Beam": 1.2,
+        "Electromagnetic Control Rod": 2,
+      },
+      machine: "Manufacturer",
+    },
+    
   },
 };

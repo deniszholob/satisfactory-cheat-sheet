@@ -1,52 +1,12 @@
 export const data_assembly_rates = {
     recipes: {
-        "Reinforced Iron Plate": {
+        "AI Limiter": {
             out: {
-                "Reinforced Iron Plate": 5,
+                "AI Limiter": 5,
             },
             in: {
-                iron_plate: 30,
-                screw: 60,
-            },
-            machine: "assembler",
-        },
-        "Circuit Board": {
-            out: {
-                "Circuit Board": 7.5,
-            },
-            in: {
-                copper_sheet: 15,
-                plastic: 30,
-            },
-            machine: "assembler",
-        },
-        modular_frame: {
-            out: {
-                modular_frame: 2,
-            },
-            in: {
-                reinforced_iron_plate: 3,
-                iron_rod: 12,
-            },
-            machine: "assembler",
-        },
-        rotor: {
-            out: {
-                rotor: 4,
-            },
-            in: {
-                iron_rod: 20,
-                screw: 100,
-            },
-            machine: "assembler",
-        },
-        "Smart Plating": {
-            out: {
-                "Smart Plating": 2,
-            },
-            in: {
-                reinforced_iron_plate: 2,
-                rotor: 2,
+                "Copper Sheet": 25,
+                Quickwire: 100,
             },
             machine: "assembler",
         },
@@ -60,46 +20,6 @@ export const data_assembly_rates = {
             },
             machine: "assembler",
         },
-        "Encased Industrial Beam": {
-            out: {
-                "Encased industrial Beam": 6,
-            },
-            in: {
-                steel_beam: 24,
-                concrete: 30,
-            },
-            machine: "assembler",
-        },
-        Motor: {
-            out: {
-                Motor: 5,
-            },
-            in: {
-                rotor: 10,
-                stator: 10,
-            },
-            machine: "assembler",
-        },
-        Stator: {
-            out: {
-                Stator: 5,
-            },
-            in: {
-                steel_pipe: 15,
-                wire: 40,
-            },
-            machine: "assembler",
-        },
-        "Automated Wiring": {
-            out: {
-                "Automated Wiring": 2.5,
-            },
-            in: {
-                stator: 2.5,
-                cable: 50,
-            },
-            machine: "assembler",
-        },
         "Assembly Director System": {
             out: {
                 "Assembly Director System": 0.75,
@@ -110,53 +30,63 @@ export const data_assembly_rates = {
             },
             machine: "assembler",
         },
+        "Automated Wiring": {
+            out: {
+                "Automated Wiring": 2.5,
+            },
+            in: {
+                Stator: 2.5,
+                Cable: 50,
+            },
+            machine: "assembler",
+        },
+        "Black Powder": {
+            out: {
+                "Black Powder": 30,
+            },
+            in: {
+                Coal: 15,
+                Sulfur: 15,
+            },
+            machine: "assembler",
+        },
+        "Circuit Board": {
+            out: {
+                "Circuit Board": 7.5,
+            },
+            in: {
+                "Copper Sheet": 15,
+                Plastic: 30,
+            },
+            machine: "assembler",
+        },
+        "Cluster Nobelisk": {
+            out: {
+                "Cluster Nobelisk": 2.5,
+            },
+            in: {
+                "Nobelisk": 7.5,
+                "Smokeless Powder": 10,
+            },
+            machine: "assembler",
+        },
         "Electromagnetic Control Rod": {
             out: {
                 "Electromagnetic Control Rod": 4,
             },
             in: {
-                stator: 6,
-                "A.I. Limiter": 4,
+                Stator: 6,
+                "AI Limiter": 4,
             },
             machine: "assembler",
         },
-        "A.I. Limiter": {
+        "Encased Industrial Beam": {
             out: {
-                "A.I. Limiter": 5,
+                "Encased industrial Beam": 6,
             },
             in: {
-                copper_sheet: 25,
-                quickwire: 100,
-            },
-            machine: "assembler",
-        },
-        "Versatile Framework": {
-            out: {
-                "Versatile Framework": 5,
-            },
-            in: {
-                modular_frame: 2.5,
-                steel_beam: 30,
-            },
-            machine: "assembler",
-        },
-        "Compacted Coal": {
-            out: {
-                "Compacted Coal": 25,
-            },
-            in: {
-                Coal: 25,
-                Sulfur: 25,
-            },
-            machine: "assembler",
-        },
-        "Encased Uranium Cell": {
-            out: {
-                "Encased Uranium Cell": 10,
-            },
-            in: {
-                "Uranium Pellet": 40,
-                Concrete: 9,
+                "Steel Beam": 24,
+                concrete: 30,
             },
             machine: "assembler",
         },
@@ -172,31 +102,61 @@ export const data_assembly_rates = {
         },
         "Heat Sink": {
             out: {
-                "Heat Sink": 10,
+                "Heat Sink": 7.5,
             },
             in: {
-                "Alclad Aluminum Sheet": 40,
-                Rubber: 70,
+                "Alclad Aluminum Sheet": 37.5,
+                "Copper Sheet": 22.5,
             },
             machine: "assembler",
         },
-        nobelisk: {
+        "Homing Rifle Ammo": {
             out: {
-                nobelisk: 3,
+                "Homing Rifle Ammo": 25,
             },
             in: {
-                black_powder: 15,
-                steel_pipe: 30,
+                "Rifle Ammo": 50,
+                "High-Speed Connector": 2.5,
             },
             machine: "assembler",
         },
-        "Black Powder": {
+        "Magnetic Field Generator": {
             out: {
-                "Black Powder": 7.5,
+                "Magnetic Field Generator": 1,
             },
             in: {
-                coal: 7.5,
-                sulfur: 15,
+                "Versatile Framework": 2.5,
+                "Electromagnetic Control Rod": 1,
+            },
+            machine: "assembler",
+        },
+        "Modular Frame": {
+            out: {
+                "Modular Frame": 2,
+            },
+            in: {
+                "Reinforced Iron Plate": 3,
+                "Iron Rod": 12,
+            },
+            machine: "assembler",
+        },
+        Motor: {
+            out: {
+                Motor: 5,
+            },
+            in: {
+                Rotor: 10,
+                Stator: 10,
+            },
+            machine: "assembler",
+        },
+        Nobelisk: {
+            out: {
+                Nobelisk: 10,
+            },
+            in: {
+                "Black Powder": 20,
+                "Steel Pipe": 20,
             },
             machine: "assembler",
         },
@@ -207,6 +167,76 @@ export const data_assembly_rates = {
             in: {
                 "Fused Modular Frame": 1,
                 "Radio Control Unit": 2,
+            },
+            machine: "assembler",
+        },
+        "Reinforced Iron Plate": {
+            out: {
+                "Reinforced Iron Plate": 5,
+            },
+            in: {
+                "Iron Plate": 30,
+                Screw: 60,
+            },
+            machine: "assembler",
+        },
+        "Rifle Ammo": {
+            out: {
+                Cartridge: 75,
+            },
+            in: {
+                "Copper Sheet": 15,
+                "Smokeless Powder": 10,
+            },
+            machine: "assembler",
+        },
+        Rotor: {
+            out: {
+                Rotor: 4,
+            },
+            in: {
+                "Iron Rod": 20,
+                Screw: 100,
+            },
+            machine: "assembler",
+        },
+        "Smart Plating": {
+            out: {
+                "Smart Plating": 2,
+            },
+            in: {
+                "Reinforced Iron Plate": 2,
+                Rotor: 2,
+            },
+            machine: "assembler",
+        },
+        Stator: {
+            out: {
+                Stator: 5,
+            },
+            in: {
+                "Steel Pipe": 15,
+                wire: 40,
+            },
+            machine: "assembler",
+        },
+        "Versatile Framework": {
+            out: {
+                "Versatile Framework": 5,
+            },
+            in: {
+                "Modular Frame": 2.5,
+                "Steel Beam": 30,
+            },
+            machine: "assembler",
+        },
+        "Compacted Coal": {
+            out: {
+                "Compacted Coal": 25,
+            },
+            in: {
+                Coal: 25,
+                Sulfur: 25,
             },
             machine: "assembler",
         },

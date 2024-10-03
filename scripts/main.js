@@ -1,17 +1,21 @@
 // Imports
+import { data_accelerator_rates } from "./data/calc-ratios/data_accelerator.js";
 import { data_assembly_rates } from "./data/calc-ratios/data_assembly.js";
+import { data_blender_rates } from "./data/calc-ratios/data_blender.js";
 import { data_construction_rates } from "./data/calc-ratios/data_construction.js";
+import { data_converter_rates } from "./data/calc-ratios/data_converter.js";
+import { data_foundry_rates } from "./data/calc-ratios/data_foundry.js";
 import { data_manufacturing_rates } from "./data/calc-ratios/data_manufacturing.js";
 import { data_mining_rates } from "./data/calc-ratios/data_mining.js";
-import { data_refining_rates } from "./data/calc-ratios/data_refining.js";
-import { data_smelting_rates } from "./data/calc-ratios/data_smelting.js";
-import { data_common_ratios } from "./data/data_chained-ratios.js";
-import { RatioRenderService } from "./services/ratio-render-service.js";
-import { data_blending_rates } from "./data/calc-ratios/data_blending.js";
-import { data_accelerator_rates } from "./data/calc-ratios/data_accelerator.js";
 import { data_nuclear_rates } from "./data/calc-ratios/data_nuclear.js";
-import { UtilService } from "./services/util-service.js";
+import { data_packager_rates } from "./data/calc-ratios/data_packager.js";
+import { data_quantum_encoder_rates } from "./data/calc-ratios/data_quantum-encoder.js";
+import { data_refining_rates } from "./data/calc-ratios/data_refining.js";
+import { data_smelter_rates } from "./data/calc-ratios/data_smelter.js";
+import { data_common_ratios } from "./data/data_chained-ratios.js";
 import { data_links } from "./data/data_links.js";
+import { RatioRenderService } from "./services/ratio-render-service.js";
+import { UtilService } from "./services/util-service.js";
 // Constants
 const elRootCalculatedRatios = document.getElementById("CalculatedRatios");
 const elRootChainedRatios = document.getElementById("ChainedRatios");
@@ -46,42 +50,50 @@ function renderRatioData() {
         // elRootChainedRatios.innerHTML = "";
         renderChainedRatios();
     }
-    if (typeof data_mining_rates === "undefined" ||
-        data_mining_rates === null ||
-        typeof data_smelting_rates === "undefined" ||
-        data_smelting_rates === null ||
-        typeof data_refining_rates === "undefined" ||
-        data_refining_rates === null ||
-        typeof data_construction_rates === "undefined" ||
-        data_construction_rates === null ||
-        typeof data_assembly_rates === "undefined" ||
-        data_assembly_rates === null ||
-        typeof data_manufacturing_rates === "undefined" ||
-        data_manufacturing_rates === null ||
-        typeof data_blending_rates === "undefined" ||
-        data_blending_rates === null ||
-        typeof data_accelerator_rates === "undefined" ||
-        data_accelerator_rates === null ||
-        typeof data_nuclear_rates === "undefined" ||
-        data_nuclear_rates === null) {
-        console.error("Error: data is null...");
-    }
-    else {
-        // Clear list
-        // elRootCalculatedRatios.innerHTML = "";
-        Object.assign(rawData, data_mining_rates.recipes);
-        Object.assign(rawData, data_smelting_rates.recipes);
-        Object.assign(rawData, data_refining_rates.recipes);
-        Object.assign(rawData, data_construction_rates.recipes);
-        Object.assign(rawData, data_assembly_rates.recipes);
-        Object.assign(rawData, data_manufacturing_rates.recipes);
-        Object.assign(rawData, data_blending_rates.recipes);
-        Object.assign(rawData, data_accelerator_rates.recipes);
-        Object.assign(rawData, data_nuclear_rates.recipes);
-        // console.log(rawData);
-        // Generate list
-        renderCalculatedRatios();
-    }
+    if (!data_accelerator_rates)
+        throw new Error("data_accelerator_rates is null");
+    if (!data_assembly_rates)
+        throw new Error("data_assembly_rates is null");
+    if (!data_blender_rates)
+        throw new Error("data_blender_rates is null");
+    if (!data_construction_rates)
+        throw new Error("data_construction_rates is null");
+    if (!data_converter_rates)
+        throw new Error("data_converter_rates is null");
+    if (!data_foundry_rates)
+        throw new Error("data_foundry_rates is null");
+    if (!data_manufacturing_rates)
+        throw new Error("data_manufacturing_rates is null");
+    if (!data_mining_rates)
+        throw new Error("data_mining_rates is null");
+    if (!data_nuclear_rates)
+        throw new Error("data_nuclear_rates is null");
+    if (!data_packager_rates)
+        throw new Error("data_packager_rates is null");
+    if (!data_quantum_encoder_rates)
+        throw new Error("data_quantum_encoder_rates is null");
+    if (!data_refining_rates)
+        throw new Error("data_refining_rates is null");
+    if (!data_smelter_rates)
+        throw new Error("data_smelter_rates is null");
+    // Clear list
+    // elRootCalculatedRatios.innerHTML = "";
+    Object.assign(rawData, data_accelerator_rates.recipes);
+    Object.assign(rawData, data_assembly_rates.recipes);
+    Object.assign(rawData, data_blender_rates.recipes);
+    Object.assign(rawData, data_construction_rates.recipes);
+    Object.assign(rawData, data_converter_rates.recipes);
+    Object.assign(rawData, data_foundry_rates.recipes);
+    Object.assign(rawData, data_manufacturing_rates.recipes);
+    Object.assign(rawData, data_mining_rates.recipes);
+    Object.assign(rawData, data_nuclear_rates.recipes);
+    Object.assign(rawData, data_packager_rates.recipes);
+    Object.assign(rawData, data_quantum_encoder_rates.recipes);
+    Object.assign(rawData, data_refining_rates.recipes);
+    Object.assign(rawData, data_smelter_rates.recipes);
+    // console.log(rawData);
+    // Generate list
+    renderCalculatedRatios();
 }
 function renderChainedRatios() {
     // renderServiceChainedRatios.render(data_common_ratios["Ratios_Smelting"], "Ore Ratios");
@@ -90,8 +102,10 @@ function renderChainedRatios() {
 }
 function renderCalculatedRatios() {
     let data = [];
-    data = parseData(data_smelting_rates.recipes, "Smelter Rates");
+    data = parseData(data_smelter_rates.recipes, "Smelter Rates");
     renderServiceCalculatedRatios.render(data, "Smelter Rates");
+    data = parseData(data_foundry_rates.recipes, "Foundry Rates");
+    renderServiceCalculatedRatios.render(data, "Foundry Rates");
     data = parseData(data_construction_rates.recipes, "Constructor Rates");
     renderServiceCalculatedRatios.render(data, "Constructor Rates");
     data = parseData(data_assembly_rates.recipes, "Assembler Rates");
@@ -100,10 +114,16 @@ function renderCalculatedRatios() {
     renderServiceCalculatedRatios.render(data, "Manufacturer Rates");
     data = parseData(data_refining_rates.recipes, "Refiner Rates");
     renderServiceCalculatedRatios.render(data, "Refiner Rates");
-    data = parseData(data_blending_rates.recipes, "Refiner Rates");
+    data = parseData(data_packager_rates.recipes, "Packager Rates");
+    renderServiceCalculatedRatios.render(data, "Packager Rates");
+    data = parseData(data_blender_rates.recipes, "Blender Rates");
     renderServiceCalculatedRatios.render(data, "Blender Rates");
     data = parseData(data_accelerator_rates.recipes, "Particle Accelerator Rates");
     renderServiceCalculatedRatios.render(data, "Particle Accelerator Rates");
+    data = parseData(data_converter_rates.recipes, "Converter Rates");
+    renderServiceCalculatedRatios.render(data, "Converter Rates");
+    data = parseData(data_quantum_encoder_rates.recipes, "Quantum Encoder Rates");
+    renderServiceCalculatedRatios.render(data, "Quantum Encoder Rates");
     data = parseData(data_nuclear_rates.recipes, "Nuclear Rates");
     renderServiceCalculatedRatios.render(data, "Nuclear Rates");
 }
@@ -114,24 +134,26 @@ function parseData(rawDataIn, name) {
     let piSet = [];
     let piRatio;
     Object.entries(rawDataIn).forEach(([k, v], i) => {
+        const recipe = k;
+        const product = v;
         // console.log(`====== ${k} ======`);
         let multiplier = 1;
         piSet = [];
-        let num = Number(Object.values(v.out)[0]);
+        let num = Number(Object.values(product.out)[0]);
         while (num * multiplier < 1) {
             multiplier *= 10;
         }
         // Out
         piSet.push({
-            name: Object.keys(v.out)[0],
+            name: Object.keys(product.out)[0],
             count: 1,
-            machine: v.machine,
+            machine: product.machine,
         });
-        const ratesRequired = Object.entries(v.in).map(([k, v]) => v * multiplier);
+        const ratesRequired = Object.entries(product.in).map(([k, v]) => v * multiplier);
         const ratesProvided = [];
         // console.log((v as Product).in);
         // Ins
-        Object.entries(v.in).forEach(([item, irr]) => {
+        Object.entries(product.in).forEach(([item, irr]) => {
             // console.log(`----- ${item} -----`);
             let itemRequiredRate = irr;
             let reqItem = rawData[item] || rawData[UtilService.getHrName(item)];
@@ -142,7 +164,7 @@ function parseData(rawDataIn, name) {
                     reqItem = rawData[key];
                 }
                 else {
-                    console.error(`Can't find: ${item}`);
+                    console.error(`Can't find: ${item} for ${recipe}`);
                 }
             }
             let itemProvidedRate = Object.values(reqItem.out)[0];
@@ -158,6 +180,8 @@ function parseData(rawDataIn, name) {
         // console.log("Prov rates:");
         // console.log(ratesProvided);
         let ratioMap = ratesRequired.map((n, i) => getRatioSimple(n, ratesProvided[i]));
+        // console.log("ratioMap");
+        // console.log(ratioMap);
         piRatio = ratioMap[0];
         for (let i = 1; i < ratioMap.length; i++) {
             piRatio = getRatioCompound(piRatio, ratioMap[i]);
@@ -165,8 +189,10 @@ function parseData(rawDataIn, name) {
         // console.log('piRatio')
         // console.log(piRatio);
         // Simplify Ratios
+        // console.log({piRatio, piSet})
         piSet.forEach((pi, i) => {
-            pi.count = piRatio[i];
+            // console.log({pi, i})
+            pi.count = piRatio ? piRatio[i] : 1;
         });
         // console.log('piSet');
         // console.log(piSet);
@@ -177,7 +203,7 @@ function parseData(rawDataIn, name) {
         });
         // console.log('\n');
     });
-    // console.log(data);
+    // console.log(`data`,data);
     return data;
 }
 function getRatioCompound(ratioA, ratioB) {

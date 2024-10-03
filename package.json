@@ -8,10 +8,12 @@
   "private": true,
   "main": "main.js",
   "scripts": {
+    "i": "pnpm install",
     "build": "tsc -w",
-    "start": "npx http-server ./index.html -p 47207"
+    "start": "npx http-server ./ -p 47207"
   },
   "devDependencies": {
-    "typescript": "4.6.4"
+    "http-server": "^14.1.1",
+    "typescript": "5.6.2"
   }
 }

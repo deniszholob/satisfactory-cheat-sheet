@@ -1,19 +1,23 @@
 // Imports
+import { data_accelerator_rates } from "./data/calc-ratios/data_accelerator.js";
 import { data_assembly_rates } from "./data/calc-ratios/data_assembly.js";
+import { data_blender_rates } from "./data/calc-ratios/data_blender.js";
 import { data_construction_rates } from "./data/calc-ratios/data_construction.js";
+import { data_converter_rates } from "./data/calc-ratios/data_converter.js";
+import { data_foundry_rates } from "./data/calc-ratios/data_foundry.js";
 import { data_manufacturing_rates } from "./data/calc-ratios/data_manufacturing.js";
 import { data_mining_rates } from "./data/calc-ratios/data_mining.js";
-import { data_refining_rates } from "./data/calc-ratios/data_refining.js";
-import { data_smelting_rates } from "./data/calc-ratios/data_smelting.js";
-import { data_common_ratios } from "./data/data_chained-ratios.js";
-import { RatioRenderService } from "./services/ratio-render-service.js";
-import { data_blending_rates } from "./data/calc-ratios/data_blending.js";
-import { data_accelerator_rates } from "./data/calc-ratios/data_accelerator.js";
 import { data_nuclear_rates } from "./data/calc-ratios/data_nuclear.js";
-import { UtilService } from "./services/util-service.js";
-import { Product, ProductionItem, ProductionItemSet } from "./type-definitions/index";
+import { data_packager_rates } from "./data/calc-ratios/data_packager.js";
+import { data_quantum_encoder_rates } from "./data/calc-ratios/data_quantum-encoder.js";
+import { data_refining_rates } from "./data/calc-ratios/data_refining.js";
+import { data_smelter_rates } from "./data/calc-ratios/data_smelter.js";
+import { data_common_ratios } from "./data/data_chained-ratios.js";
 import { data_links } from "./data/data_links.js";
-import { DataLinks, DataLink } from "./type-definitions/DataLinks.js";
+import { RatioRenderService } from "./services/ratio-render-service.js";
+import { UtilService } from "./services/util-service.js";
+import { DataLink, DataLinks } from "./type-definitions/DataLinks.js";
+import { Product, ProductionItem, ProductionItemSet } from "./type-definitions/index";
 
 // Constants
 const elRootCalculatedRatios: HTMLElement = document.getElementById("CalculatedRatios") as HTMLElement;
@@ -53,44 +57,39 @@ function renderRatioData(): void {
     // elRootChainedRatios.innerHTML = "";
     renderChainedRatios();
   }
+  
+  if(!data_accelerator_rates) throw new Error("data_accelerator_rates is null");
+  if(!data_assembly_rates) throw new Error("data_assembly_rates is null");
+  if(!data_blender_rates) throw new Error("data_blender_rates is null");
+  if(!data_construction_rates) throw new Error("data_construction_rates is null");
+  if(!data_converter_rates) throw new Error("data_converter_rates is null");
+  if(!data_foundry_rates) throw new Error("data_foundry_rates is null");
+  if(!data_manufacturing_rates) throw new Error("data_manufacturing_rates is null");
+  if(!data_mining_rates) throw new Error("data_mining_rates is null");
+  if(!data_nuclear_rates) throw new Error("data_nuclear_rates is null");
+  if(!data_packager_rates) throw new Error("data_packager_rates is null");
+  if(!data_quantum_encoder_rates) throw new Error("data_quantum_encoder_rates is null");
+  if(!data_refining_rates) throw new Error("data_refining_rates is null");
+  if(!data_smelter_rates) throw new Error("data_smelter_rates is null");
 
-  if (
-    typeof data_mining_rates === "undefined" ||
-    data_mining_rates === null ||
-    typeof data_smelting_rates === "undefined" ||
-    data_smelting_rates === null ||
-    typeof data_refining_rates === "undefined" ||
-    data_refining_rates === null ||
-    typeof data_construction_rates === "undefined" ||
-    data_construction_rates === null ||
-    typeof data_assembly_rates === "undefined" ||
-    data_assembly_rates === null ||
-    typeof data_manufacturing_rates === "undefined" ||
-    data_manufacturing_rates === null ||
-    typeof data_blending_rates === "undefined" ||
-    data_blending_rates === null ||
-    typeof data_accelerator_rates === "undefined" ||
-    data_accelerator_rates === null ||
-    typeof data_nuclear_rates === "undefined" ||
-    data_nuclear_rates === null
-  ) {
-    console.error("Error: data is null...");
-  } else {
     // Clear list
     // elRootCalculatedRatios.innerHTML = "";
-    Object.assign(rawData, data_mining_rates.recipes);
-    Object.assign(rawData, data_smelting_rates.recipes);
-    Object.assign(rawData, data_refining_rates.recipes);
-    Object.assign(rawData, data_construction_rates.recipes);
-    Object.assign(rawData, data_assembly_rates.recipes);
-    Object.assign(rawData, data_manufacturing_rates.recipes);
-    Object.assign(rawData, data_blending_rates.recipes);
     Object.assign(rawData, data_accelerator_rates.recipes);
+    Object.assign(rawData, data_assembly_rates.recipes);
+    Object.assign(rawData, data_blender_rates.recipes);
+    Object.assign(rawData, data_construction_rates.recipes);
+    Object.assign(rawData, data_converter_rates.recipes);
+    Object.assign(rawData, data_foundry_rates.recipes);
+    Object.assign(rawData, data_manufacturing_rates.recipes);
+    Object.assign(rawData, data_mining_rates.recipes);
     Object.assign(rawData, data_nuclear_rates.recipes);
+    Object.assign(rawData, data_packager_rates.recipes);
+    Object.assign(rawData, data_quantum_encoder_rates.recipes);
+    Object.assign(rawData, data_refining_rates.recipes);
+    Object.assign(rawData, data_smelter_rates.recipes);
     // console.log(rawData);
     // Generate list
     renderCalculatedRatios();
-  }
 }
 
 function renderChainedRatios(): void {
@@ -101,8 +100,10 @@ function renderChainedRatios(): void {
 
 function renderCalculatedRatios(): void {
   let data: ProductionItemSet[] = [];
-  data = parseData(data_smelting_rates.recipes, "Smelter Rates");
+  data = parseData(data_smelter_rates.recipes, "Smelter Rates");
   renderServiceCalculatedRatios.render(data, "Smelter Rates");
+  data = parseData(data_foundry_rates.recipes, "Foundry Rates");
+  renderServiceCalculatedRatios.render(data, "Foundry Rates");
   data = parseData(data_construction_rates.recipes, "Constructor Rates");
   renderServiceCalculatedRatios.render(data, "Constructor Rates");
   data = parseData(data_assembly_rates.recipes, "Assembler Rates");
@@ -111,10 +112,16 @@ function renderCalculatedRatios(): void {
   renderServiceCalculatedRatios.render(data, "Manufacturer Rates");
   data = parseData(data_refining_rates.recipes, "Refiner Rates");
   renderServiceCalculatedRatios.render(data, "Refiner Rates");
-  data = parseData(data_blending_rates.recipes, "Refiner Rates");
+  data = parseData(data_packager_rates.recipes, "Packager Rates");
+  renderServiceCalculatedRatios.render(data, "Packager Rates");
+  data = parseData(data_blender_rates.recipes, "Blender Rates");
   renderServiceCalculatedRatios.render(data, "Blender Rates");
   data = parseData(data_accelerator_rates.recipes, "Particle Accelerator Rates");
   renderServiceCalculatedRatios.render(data, "Particle Accelerator Rates");
+  data = parseData(data_converter_rates.recipes, "Converter Rates");
+  renderServiceCalculatedRatios.render(data, "Converter Rates");
+  data = parseData(data_quantum_encoder_rates.recipes, "Quantum Encoder Rates");
+  renderServiceCalculatedRatios.render(data, "Quantum Encoder Rates");
   data = parseData(data_nuclear_rates.recipes, "Nuclear Rates");
   renderServiceCalculatedRatios.render(data, "Nuclear Rates");
 }
@@ -127,30 +134,32 @@ function parseData(rawDataIn: any, name: string): ProductionItemSet[] {
   let piRatio: number[];
 
   Object.entries(rawDataIn).forEach(([k, v]: [string, unknown], i: number): void => {
+    const recipe: string = k;
+    const product: Product = v as Product
     // console.log(`====== ${k} ======`);
     let multiplier: number = 1;
     piSet = [];
 
-    let num: number = Number(Object.values((v as Product).out)[0]);
+    let num: number = Number(Object.values((product as Product).out)[0]);
     while (num * multiplier < 1) {
       multiplier *= 10;
     }
 
     // Out
     piSet.push({
-      name: Object.keys((v as Product).out)[0],
+      name: Object.keys((product as Product).out)[0],
       count: 1,
-      machine: (v as Product).machine,
+      machine: (product as Product).machine,
     });
 
-    const ratesRequired: number[] = Object.entries((v as Product).in).map(
+    const ratesRequired: number[] = Object.entries((product as Product).in).map(
       ([k, v]: [string, unknown]): number => (v as number) * multiplier
     );
     const ratesProvided: number[] = [];
 
     // console.log((v as Product).in);
     // Ins
-    Object.entries((v as Product).in).forEach(([item, irr]: [string, unknown]): void => {
+    Object.entries((product as Product).in).forEach(([item, irr]: [string, unknown]): void => {
       // console.log(`----- ${item} -----`);
       let itemRequiredRate: number = irr as number;
       let reqItem: Product = rawData[item] || rawData[UtilService.getHrName(item)];
@@ -162,7 +171,7 @@ function parseData(rawDataIn: any, name: string): ProductionItemSet[] {
         if (key) {
           reqItem = rawData[key];
         } else {
-          console.error(`Can't find: ${item}`);
+          console.error(`Can't find: ${item} for ${recipe}`);
         }
       }
 
@@ -184,6 +193,8 @@ function parseData(rawDataIn: any, name: string): ProductionItemSet[] {
     let ratioMap: number[][] = ratesRequired.map((n: number, i: number): number[] =>
       getRatioSimple(n, ratesProvided[i])
     );
+    // console.log("ratioMap");
+    // console.log(ratioMap);
     piRatio = ratioMap[0];
 
     for (let i: number = 1; i < ratioMap.length; i++) {
@@ -193,8 +204,10 @@ function parseData(rawDataIn: any, name: string): ProductionItemSet[] {
     // console.log(piRatio);
 
     // Simplify Ratios
+    // console.log({piRatio, piSet})
     piSet.forEach((pi: ProductionItem, i: number): void => {
-      pi.count = piRatio[i];
+      // console.log({pi, i})
+      pi.count = piRatio ? piRatio[i] : 1;
     });
     // console.log('piSet');
     // console.log(piSet);
@@ -207,7 +220,7 @@ function parseData(rawDataIn: any, name: string): ProductionItemSet[] {
 
     // console.log('\n');
   });
-  // console.log(data);
+  // console.log(`data`,data);
   return data;
 }
 

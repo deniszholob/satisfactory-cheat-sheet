@@ -1,14 +1,14 @@
-import { iconUrlMap } from "../icon_url_map.js";
+import { iconUrlMap, localIconUrlMap } from "../icon_url_map.js";
 const sf_calc_icons = [
-    "Copper Sheet",
-    "Solid Biofuel",
-    "Non Fissile Uranium",
-    "Nitric Acid",
-    "Plutonium Pellet",
-    "Nuclear Pasta",
-    "Encased Plutonium Cell",
-    "Plutonium Fuel Rod",
-    "Plutonium Waste",
+// "Copper Sheet",
+// "Solid Biofuel",
+// "Non Fissile Uranium",
+// "Nitric Acid",
+// "Plutonium Pellet",
+// "Nuclear Pasta",
+// "Encased Plutonium Cell",
+// "Plutonium Fuel Rod",
+// "Plutonium Waste",
 ];
 /** Common functions for links */
 export class UtilService {
@@ -45,12 +45,18 @@ export class UtilService {
         if (sf_calc_icons.includes(name)) {
             return "https://static.satisfactory-calculator.com/img/gameUI/IconDesc_" + name.replace(/ /g, "") + "_256.png";
         }
+        else if (Object.keys(localIconUrlMap).includes(name)) {
+            return (Object.entries(localIconUrlMap).find(([k, v]) => {
+                return k.includes(name);
+            })?.[1] || "");
+        }
         else if (Object.keys(iconUrlMap).includes(name)) {
             return (Object.entries(iconUrlMap).find(([k, v]) => {
                 return k.includes(name);
             })?.[1] || "");
         }
-        return "https://kirkmcdonald.github.io/satisfactory-calculator/images/" + name + ".png";
+        // return "https://kirkmcdonald.github.io/satisfactory-calculator/images/" + name + ".png";
+        return `https://raw.githubusercontent.com/KirkMcDonald/satisfactory-calculator/refs/heads/master/images/` + name + ".png";
     }
     /**
      * <img src="url" alt="name" title="name">

@@ -1,38 +1,20 @@
 export const data_construction_rates: any = {
   recipes: {
-    Concrete: {
+    "Alien DNA Capsule": {
       out: {
-        Concrete: 15,
+        "Alien DNA Capsule": 10,
       },
       in: {
-        limestone: 45,
+        "Alien Protein": 10,
       },
       machine: "constructor",
     },
-    Cable: {
+    "Aluminum Casing": {
       out: {
-        Cable: 30,
+        "Aluminum Casing": 60,
       },
       in: {
-        wire: 60,
-      },
-      machine: "constructor",
-    },
-    Wire: {
-      out: {
-        Wire: 30,
-      },
-      in: {
-        copper_ingot: 15,
-      },
-      machine: "constructor",
-    },
-    Screw: {
-      out: {
-        Screw: 40,
-      },
-      in: {
-        iron_rod: 10,
+        "Aluminum Ingot": 90,
       },
       machine: "constructor",
     },
@@ -54,21 +36,30 @@ export const data_construction_rates: any = {
       },
       machine: "constructor",
     },
-    "Iron Plate": {
+    Cable: {
       out: {
-        "iron Plate": 20,
+        Cable: 30,
       },
       in: {
-        iron_ingot: 30,
+        wire: 60,
       },
       machine: "constructor",
     },
-    "Iron Rod": {
+    Concrete: {
       out: {
-        "Iron Rod": 15,
+        Concrete: 15,
       },
       in: {
-        iron_ingot: 15,
+        limestone: 45,
+      },
+      machine: "constructor",
+    },
+    "Copper Powder": {
+      out: {
+        "Copper Powder": 50,
+      },
+      in: {
+        "Copper Ingot": 300,
       },
       machine: "constructor",
     },
@@ -81,30 +72,103 @@ export const data_construction_rates: any = {
       },
       machine: "constructor",
     },
+    "Empty Canister": {
+      out: {
+        "Empty Canister": 60,
+      },
+      in: {
+        Plastic: 30,
+      },
+      machine: "constructor",
+    },
+    "Empty Fluid Tank": {
+      out: {
+        "Empty Fluid Tank": 60,
+      },
+      in: {
+        "Aluminum Ingot": 60,
+      },
+      machine: "constructor",
+    },
+    "Ficsite Trigon": {
+      out: {
+        "Ficsite Trigon": 30,
+      },
+      in: {
+        "Ficsite Ingot": 10,
+      },
+      machine: "constructor",
+    },
+    // TODO: Support alternate recipes "Hog Protein"
+    "Alien Protein": {
+      out: {
+        "Alien Protein": 20,
+      },
+      in: {
+        "Hog Remains": 20,
+      },
+      machine: "constructor",
+    },
+    "Iron Plate": {
+      out: {
+        "Iron Plate": 20,
+      },
+      in: {
+        "Iron Ingot": 30,
+      },
+      machine: "constructor",
+    },
+    "Iron Rebar": {
+      out: {
+        "Iron Rebar": 15,
+      },
+      in: {
+        "Iron Ingot": 15,
+      },
+      machine: "constructor",
+    },
+    "Iron Rod": {
+      out: {
+        "Iron Rod": 15,
+      },
+      in: {
+        "Iron Ingot": 15,
+      },
+      machine: "constructor",
+    },
     "Quartz Crystal": {
       out: {
         "Quartz Crystal": 22.5,
       },
       in: {
-        raw_quartz: 37.5,
+        "Raw Quartz": 37.5,
       },
       machine: "constructor",
     },
-    "Steel Beam": {
+    Quickwire: {
       out: {
-        "Steel Beam": 15,
+        Quickwire: 60,
       },
       in: {
-        steel_ingot: 60,
+        "Caterium Ingot": 12,
       },
       machine: "constructor",
     },
-    "Steel Pipe": {
+    "Reanimated SAM": {
       out: {
-        "Steel Pipe": 20,
+        "Reanimated SAM": 30,
       },
       in: {
-        steel_ingot: 30,
+        SAM: 120,
+      },
+      machine: "constructor",
+    },
+    Screw: {
+      out: {
+        Screw: 40,
+      },
+      in: {
+        "Iron Rod": 10,
       },
       machine: "constructor",
     },
@@ -113,7 +177,7 @@ export const data_construction_rates: any = {
         Silica: 37.5,
       },
       in: {
-        raw_quartz: 22.5,
+        "Raw Quartz": 22.5,
       },
       machine: "constructor",
     },
@@ -126,30 +190,30 @@ export const data_construction_rates: any = {
       },
       machine: "constructor",
     },
-    Quickwire: {
+    "Steel Beam": {
       out: {
-        Quickwire: 60,
+        "Steel Beam": 15,
       },
       in: {
-        caterium_ingot: 12,
+        "Steel Ingot": 60,
       },
       machine: "constructor",
     },
-    "Aluminum Casing": {
+    "Steel Pipe": {
       out: {
-        "Aluminum Casing": 60,
+        "Steel Pipe": 20,
       },
       in: {
-        "Aluminum Ingot": 90,
+        "Steel Ingot": 30,
       },
       machine: "constructor",
     },
-    "Copper Powder": {
+    Wire: {
       out: {
-        "Copper Powder": 50,
+        Wire: 30,
       },
       in: {
-        "Copper Ingot": 300,
+        copper_ingot: 15,
       },
       machine: "constructor",
     },
