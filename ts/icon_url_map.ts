@@ -8,10 +8,14 @@ export const localIconUrlMap = {
 }
 
 export const iconUrlMap = {
+  "ENERGY": "https://raw.githubusercontent.com/deniszholob/icons-factorio/refs/heads/main/factorio-icons/core/icons/tooltips/tooltip-category-electricity.png",
+  "Biomass Wood": "https://raw.githubusercontent.com/KirkMcDonald/satisfactory-calculator/refs/heads/master/images/Biomass.png",
+  "Biomass Leaves": "https://raw.githubusercontent.com/KirkMcDonald/satisfactory-calculator/refs/heads/master/images/Biomass.png",
   Pipeline: "https://satisfactory.wiki.gg/images/d/d3/Clean_Pipeline_Mk.1.png",
   "Non Fissile Uranium": "https://satisfactory.wiki.gg/images/e/ef/Non-Fissile_Uranium.png",
   "Biochemical Sculptor":"https://satisfactory.wiki.gg/images/d/df/Biochemical_Sculptor.png",
   "Iodine-Infused Filter": "https://satisfactory.wiki.gg/images/e/ea/Iodine-Infused_Filter.png",
+  "Main Portal": "https://satisfactory.wiki.gg/images/Main_Portal.png",
   // "Solid Biofuel": "https://static.satisfactory-calculator.com/img/gameUI/IconDesc_SolidBiofuel_256.png",
   // "Smart Plating": "https://static.satisfactory-calculator.com/img/gameUI/IconDesc_SpelevatorPart_1_256.png",
   // "Versatile Framework": "https://static.satisfactory-calculator.com/img/gameUI/IconDesc_SpelevatorPart_2_256.png",

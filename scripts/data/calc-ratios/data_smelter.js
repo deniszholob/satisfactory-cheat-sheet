@@ -1,11 +1,11 @@
 export const data_smelter_rates = {
     "recipes": {
-        "Caterium Ingot": {
+        "Iron Ingot": {
             "out": {
-                "Caterium Ingot": 15
+                "Iron Ingot": 30
             },
             "in": {
-                "caterium_ore": 45
+                "Iron Ore": 30
             },
             "machine": "smelter"
         },
@@ -14,16 +14,16 @@ export const data_smelter_rates = {
                 "Copper Ingot": 30
             },
             "in": {
-                "copper_ore": 30
+                "Copper Ore": 30
             },
             "machine": "smelter"
         },
-        "Iron Ingot": {
+        "Caterium Ingot": {
             "out": {
-                "Iron Ingot": 30
+                "Caterium Ingot": 15
             },
             "in": {
-                "Iron Ore": 30
+                "Caterium Ore": 45
             },
             "machine": "smelter"
         },

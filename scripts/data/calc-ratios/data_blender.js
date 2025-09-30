@@ -1,25 +1,13 @@
 export const data_blender_rates = {
     recipes: {
-        Battery: {
+        "Fused Modular Frame": {
             out: {
-                Battery: 20,
-                "Water Out": 30,
+                "Fused Modular Frame": 1.5,
             },
             in: {
-                "Sulfuric Acid": 50,
-                "Alumina Solution": 40,
-                "Aluminum Casing": 20,
-            },
-            machine: "Blender",
-        },
-        "Biochemical Sculptor": {
-            out: {
-                "Biochemical Sculptor": 2,
-            },
-            in: {
-                "Assembly Director System": 0.5,
-                "Ficsite Trigon": 40,
-                "Water": 10,
+                "Heavy Modular Frame": 1.5,
+                "Aluminum Casing": 75,
+                "Nitrogen Gas": 37.5,
             },
             machine: "Blender",
         },
@@ -35,26 +23,14 @@ export const data_blender_rates = {
             },
             machine: "Blender",
         },
-        "Encased Uranium Cell": {
+        "Biochemical Sculptor": {
             out: {
-                "Encased Uranium Cell": 25,
-                "Sulfuric Acid": 10,
+                "Biochemical Sculptor": 2,
             },
             in: {
-                Uranium: 50,
-                Concrete: 15,
-                "Sulfuric Acid": 40,
-            },
-            machine: "Blender",
-        },
-        "Fused Modular Frame": {
-            out: {
-                "Fused Modular Frame": 1.5,
-            },
-            in: {
-                "Heavy Modular Frame": 1.5,
-                "Aluminum Casing": 75,
-                "Nitrogen Gas": 37.5,
+                "Assembly Director System": 0.5,
+                "Ficsite Trigon": 40,
+                "Water": 10,
             },
             machine: "Blender",
         },
@@ -66,6 +42,18 @@ export const data_blender_rates = {
                 "Nitrogen Gas": 120,
                 Water: 30,
                 "Iron Plate": 10,
+            },
+            machine: "Blender",
+        },
+        "Encased Uranium Cell": {
+            out: {
+                "Encased Uranium Cell": 25,
+                "Sulfuric Acid": 10,
+            },
+            in: {
+                Uranium: 50,
+                Concrete: 15,
+                "Sulfuric Acid": 40,
             },
             machine: "Blender",
         },
@@ -90,6 +78,18 @@ export const data_blender_rates = {
             in: {
                 Turbofuel: 60,
                 "Nitric Acid": 10,
+            },
+            machine: "Blender",
+        },
+        Battery: {
+            out: {
+                Battery: 20,
+                "Water Out": 30,
+            },
+            in: {
+                "Sulfuric Acid": 50,
+                "Alumina Solution": 40,
+                "Aluminum Casing": 20,
             },
             machine: "Blender",
         },

@@ -1,32 +1,30 @@
 export const data_manufacturing_rates = {
     recipes: {
-        "Adaptive Control Unit": {
+        "Modular Engine": {
             out: {
-                "Adaptive Control Unit": 1,
+                "Modular Engine": 1,
             },
             in: {
-                "Automated Wiring": 7.5,
-                "Circuit Board": 5,
-                "Heavy Modular Frame": 1,
-                Computer: 1,
+                Motor: 2,
+                Rubber: 15,
+                "Smart Plating": 2,
             },
             machine: "Manufacturer",
         },
-        "Ballistic Warp Drive": {
+        "High-Speed Connector": {
             out: {
-                "Ballistic Warp Drive": 1,
+                "High-Speed Connector": 3.75,
             },
             in: {
-                "Thermal Propulsion Rocket": 1,
-                "Singularity Cell": 5,
-                "Superposition Oscillator": 2,
-                "Dark Matter Crystal": 40,
+                Quickwire: 210,
+                Cable: 37.5,
+                "Circuit Board": 3.75,
             },
             machine: "Manufacturer",
         },
-        Computer: {
+        "Computer": {
             out: {
-                Computer: 2.5,
+                "Computer": 2.5,
             },
             in: {
                 "Circuit Board": 10,
@@ -35,36 +33,15 @@ export const data_manufacturing_rates = {
             },
             machine: "Manufacturer",
         },
-        "Crystal Oscillator": {
+        Supercomputer: {
             out: {
-                "Crystal Oscillator": 1,
+                Supercomputer: 1.875,
             },
             in: {
-                "Quartz Crystal": 18,
-                Cable: 14,
-                "Reinforced Iron Plate": 2.5,
-            },
-            machine: "Manufacturer",
-        },
-        "Explosive Rebar": {
-            out: {
-                "Explosive Rebar": 5,
-            },
-            in: {
-                "Iron Rebar": 10,
-                "Smokeless Powder": 10,
-                "Steel Pipe": 10,
-            },
-            machine: "Manufacturer",
-        },
-        "Gas Filter": {
-            out: {
-                "Gas Filter": 7.5,
-            },
-            in: {
-                "Fabric": 15,
-                "Coal": 30,
-                "Iron Plate": 15,
+                Computer: 7.5,
+                "AI Limiter": 3.75,
+                "High-Speed Connector": 5.625,
+                Plastic: 52.5,
             },
             machine: "Manufacturer",
         },
@@ -80,60 +57,26 @@ export const data_manufacturing_rates = {
             },
             machine: "Manufacturer",
         },
-        "High-Speed Connector": {
+        "Adaptive Control Unit": {
             out: {
-                "High-Speed Connector": 3.75,
+                "Adaptive Control Unit": 1,
             },
             in: {
-                Quickwire: 210,
-                Cable: 37.5,
-                "Circuit Board": 3.75,
+                "Automated Wiring": 7.5,
+                "Circuit Board": 5,
+                "Heavy Modular Frame": 1,
+                "Computer": 1,
             },
             machine: "Manufacturer",
         },
-        "Iodine-Infused Filter": {
+        "Crystal Oscillator": {
             out: {
-                "Iodine-Infused Filter": 3.75,
+                "Crystal Oscillator": 1,
             },
             in: {
-                "Gas Filter": 3.75,
-                "Quickwire": 30,
-                "Aluminum Casing": 3.75,
-            },
-            machine: "Manufacturer",
-        },
-        "Modular Engine": {
-            out: {
-                "Modular Engine": 1,
-            },
-            in: {
-                Motor: 2,
-                Rubber: 15,
-                "Smart Plating": 2,
-            },
-            machine: "Manufacturer",
-        },
-        "Nuke Nobelisk": {
-            out: {
-                "Nuke Nobelisk": 0.5,
-            },
-            in: {
-                Nobelisk: 2.5,
-                "Encased Uranium Cell": 10,
-                "Smokeless Powder": 5,
-                "AI Limiter": 3,
-            },
-            machine: "Manufacturer",
-        },
-        "Plutonium Fuel Rod": {
-            out: {
-                "Plutonium Fuel Rod": 0.25,
-            },
-            in: {
-                "Encased Plutonium Cell": 7.5,
-                "Steel Beam": 4.5,
-                "Electromagnetic Control Rod": 1.5,
-                "Heat Sink": 2.5,
+                "Quartz Crystal": 18,
+                Cable: 14,
+                "Reinforced Iron Plate": 2.5,
             },
             machine: "Manufacturer",
         },
@@ -145,6 +88,30 @@ export const data_manufacturing_rates = {
                 "Aluminum Casing": 40,
                 "Crystal Oscillator": 1.25,
                 Computer: 2.5,
+            },
+            machine: "Manufacturer",
+        },
+        "Turbo Motor": {
+            out: {
+                "Turbo Motor": 1.875,
+            },
+            in: {
+                "Cooling System": 7.5,
+                "Radio Control Unit": 3.75,
+                "Motor": 7.5,
+                "Rubber": 45,
+            },
+            machine: "Manufacturer",
+        },
+        "Thermal Propulsion Rocket": {
+            out: {
+                "Thermal Propulsion Rocket": 1,
+            },
+            in: {
+                "Modular Engine": 2.5,
+                "Turbo Motor": 1,
+                "Cooling System": 3,
+                "Fused Modular Frame": 1,
             },
             machine: "Manufacturer",
         },
@@ -171,50 +138,15 @@ export const data_manufacturing_rates = {
             },
             machine: "Manufacturer",
         },
-        Supercomputer: {
+        "Ballistic Warp Drive": {
             out: {
-                Supercomputer: 1.875,
+                "Ballistic Warp Drive": 1,
             },
             in: {
-                Computer: 7.5,
-                "AI Limiter": 3.75,
-                "High-Speed Connector": 5.625,
-                Plastic: 52.5,
-            },
-            machine: "Manufacturer",
-        },
-        "Thermal Propulsion Rocket": {
-            out: {
                 "Thermal Propulsion Rocket": 1,
-            },
-            in: {
-                "Modular Engine": 2.5,
-                "Turbo Motor": 1,
-                "Cooling System": 3,
-                "Fused Modular Frame": 1,
-            },
-            machine: "Manufacturer",
-        },
-        "Turbo Motor": {
-            out: {
-                "Turbo Motor": 1.875,
-            },
-            in: {
-                "Cooling System": 7.5,
-                "Radio Control Unit": 3.75,
-                "Motor": 7.5,
-                "Rubber": 45,
-            },
-            machine: "Manufacturer",
-        },
-        "Turbo Rifle Ammo": {
-            out: {
-                "Turbo Rifle Ammo": 250,
-            },
-            in: {
-                "Rifle Ammo": 125,
-                "Aluminum Casing": 15,
-                "Packaged Turbofuel": 15,
+                "Singularity Cell": 5,
+                "Superposition Oscillator": 2,
+                "Dark Matter Crystal": 40,
             },
             machine: "Manufacturer",
         },
@@ -226,6 +158,74 @@ export const data_manufacturing_rates = {
                 "Encased Uranium Cell": 20,
                 "Encased Industrial Beam": 1.2,
                 "Electromagnetic Control Rod": 2,
+            },
+            machine: "Manufacturer",
+        },
+        "Plutonium Fuel Rod": {
+            out: {
+                "Plutonium Fuel Rod": 0.25,
+            },
+            in: {
+                "Encased Plutonium Cell": 7.5,
+                "Steel Beam": 4.5,
+                "Electromagnetic Control Rod": 1.5,
+                "Heat Sink": 2.5,
+            },
+            machine: "Manufacturer",
+        },
+        "Explosive Rebar": {
+            out: {
+                "Explosive Rebar": 5,
+            },
+            in: {
+                "Iron Rebar": 10,
+                "Smokeless Powder": 10,
+                "Steel Pipe": 10,
+            },
+            machine: "Manufacturer",
+        },
+        "Gas Filter": {
+            out: {
+                "Gas Filter": 7.5,
+            },
+            in: {
+                "Fabric": 15,
+                "Coal": 30,
+                "Iron Plate": 15,
+            },
+            machine: "Manufacturer",
+        },
+        "Iodine-Infused Filter": {
+            out: {
+                "Iodine-Infused Filter": 3.75,
+            },
+            in: {
+                "Gas Filter": 3.75,
+                "Quickwire": 30,
+                "Aluminum Casing": 3.75,
+            },
+            machine: "Manufacturer",
+        },
+        "Nuke Nobelisk": {
+            out: {
+                "Nuke Nobelisk": 0.5,
+            },
+            in: {
+                Nobelisk: 2.5,
+                "Encased Uranium Cell": 10,
+                "Smokeless Powder": 5,
+                "AI Limiter": 3,
+            },
+            machine: "Manufacturer",
+        },
+        "Turbo Rifle Ammo": {
+            out: {
+                "Turbo Rifle Ammo": 250,
+            },
+            in: {
+                "Rifle Ammo": 125,
+                "Aluminum Casing": 15,
+                "Packaged Turbofuel": 15,
             },
             machine: "Manufacturer",
         },

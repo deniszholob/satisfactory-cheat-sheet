@@ -25,11 +25,19 @@ export class RatioRenderService {
     });
 
     if (title && title.length > 0) {
+      const titleHref:string = title.replace(/ /g, "-").toLocaleLowerCase();
+      const titleAnchor: HTMLAnchorElement = document.createElement("a");
+      titleAnchor.href = `#${titleHref}`;
+
       const elTitle: HTMLHeadingElement = document.createElement("h4");
       elTitle.innerHTML = title || "";
       elTitle.className = "text-center full-width";
-      this.elRoot.appendChild(elTitle);
+      elTitle.id = titleHref;
+
+      titleAnchor.appendChild(elTitle);
+      this.elRoot.appendChild(titleAnchor);
     }
+
     this.elRoot.appendChild(elRatios_1);
   }
 }
@@ -50,7 +58,8 @@ function renderDataPoint(data: ProductionItemSet): HTMLAnchorElement | undefined
       const elItemIcon: HTMLDivElement = UtilService.getSfIconProductionItem(
         item.name,
         item.machine,
-        Math.trunc(item.count)
+        // Math.trunc(item.count)
+        item.count
       );
       elLink.appendChild(elItemIcon);
     });

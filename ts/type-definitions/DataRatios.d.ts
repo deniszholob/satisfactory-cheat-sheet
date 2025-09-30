@@ -1,9 +1,3 @@
-export interface Product {
-  out: any;
-  in: any;
-  machine: string;
-}
-
 export interface ProductionItem {
   name: string;
   machine: string;

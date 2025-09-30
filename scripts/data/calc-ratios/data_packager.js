@@ -1,5 +1,15 @@
 export const data_packager_rates = {
     recipes: {
+        "Packaged Liquid Biofuel": {
+            out: {
+                "Packaged Liquid Biofuel": 40,
+            },
+            in: {
+                "Liquid Biofuel": 40,
+                "Empty Canister": 40,
+            },
+            machine: "Packager",
+        },
         "Packaged Fuel": {
             out: {
                 "Packaged Fuel": 40,
@@ -8,27 +18,7 @@ export const data_packager_rates = {
                 Fuel: 40,
                 "Empty Canister": 40,
             },
-            machine: "Blender",
-        },
-        "Packaged Ionized Fuel": {
-            out: {
-                "Packaged Ionized Fuel": 40,
-            },
-            in: {
-                "Ionized Fuel": 80,
-                "Empty Canister": 40,
-            },
-            machine: "Blender",
-        },
-        "Packaged Rocket Fuel": {
-            out: {
-                "Packaged Turbofuel": 60,
-            },
-            in: {
-                "Rocket Fuel": 120,
-                "Empty Canister": 60,
-            },
-            machine: "Blender",
+            machine: "Packager",
         },
         "Packaged Turbofuel": {
             out: {
@@ -38,7 +28,27 @@ export const data_packager_rates = {
                 "Turbofuel": 20,
                 "Empty Canister": 20,
             },
-            machine: "Blender",
+            machine: "Packager",
+        },
+        "Packaged Rocket Fuel": {
+            out: {
+                "Packaged Turbofuel": 60,
+            },
+            in: {
+                "Rocket Fuel": 120,
+                "Empty Fluid Tank": 60,
+            },
+            machine: "Packager",
+        },
+        "Packaged Ionized Fuel": {
+            out: {
+                "Packaged Ionized Fuel": 40,
+            },
+            in: {
+                "Ionized Fuel": 80,
+                "Empty Fluid Tank": 40,
+            },
+            machine: "Packager",
         },
     },
 };

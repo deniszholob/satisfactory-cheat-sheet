@@ -1,4 +1,6 @@
-export const data_foundry_rates: any = {
+import { Data } from "../data.model";
+
+export const data_foundry_rates: Data = {
     "recipes": {
       "Steel Ingot": {
         "out": {
@@ -22,4 +24,3 @@ export const data_foundry_rates: any = {
       },
     }
   }
-  

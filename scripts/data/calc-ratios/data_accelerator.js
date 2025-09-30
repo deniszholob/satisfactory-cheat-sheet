@@ -1,12 +1,12 @@
 export const data_accelerator_rates = {
     recipes: {
-        "Dark Matter Crystal": {
+        "Nuclear Pasta": {
             out: {
-                "Dark Matter Crystal": 30,
+                "Nuclear Pasta": 0.5,
             },
             in: {
-                "Diamonds": 30,
-                "Dark Matter Residue": 150,
+                "Pressure Conversion Cube": 0.5,
+                "Copper Powder": 100,
             },
             machine: "Particle Accelerator",
         },
@@ -19,24 +19,13 @@ export const data_accelerator_rates = {
             },
             machine: "Particle Accelerator",
         },
-        "Ficsonium": {
+        "Dark Matter Crystal": {
             out: {
-                "Ficsonium": 10,
+                "Dark Matter Crystal": 30,
             },
             in: {
-                "Plutonium Waste": 10,
-                "Singularity Cell": 10,
-                "Dark Matter Residue": 200,
-            },
-            machine: "Particle Accelerator",
-        },
-        "Nuclear Pasta": {
-            out: {
-                "Nuclear Pasta": 0.5,
-            },
-            in: {
-                "Pressure Conversion Cube": 0.5,
-                "Copper Powder": 100,
+                "Diamonds": 30,
+                "Dark Matter Residue": 150,
             },
             machine: "Particle Accelerator",
         },
@@ -47,6 +36,17 @@ export const data_accelerator_rates = {
             in: {
                 "Non Fissile Uranium": 100,
                 "Uranium Waste": 25,
+            },
+            machine: "Particle Accelerator",
+        },
+        "Ficsonium": {
+            out: {
+                "Ficsonium": 10,
+            },
+            in: {
+                "Plutonium Waste": 10,
+                "Singularity Cell": 10,
+                "Dark Matter Residue": 200,
             },
             machine: "Particle Accelerator",
         },

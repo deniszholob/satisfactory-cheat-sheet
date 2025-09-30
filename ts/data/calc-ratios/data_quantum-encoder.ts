@@ -1,44 +1,7 @@
-export const data_quantum_encoder_rates: any = {
+import { Data } from "../data.model";
+
+export const data_quantum_encoder_rates: Data = {
   recipes: {
-    "AI Expansion Server": {
-      out: {
-        "AI Expansion Server": 4,
-        "Dark Matter Residue": 100,
-      },
-      in: {
-        "Magnetic Field Generator": 4,
-        "Neural-Quantum Processor": 4,
-        "Superposition Oscillator": 4,
-        "Excited Photonic Matter": 100,
-      },
-      machine: "Quantum Encoder",
-    },
-    "Alien Power Matrix": {
-      out: {
-        "Alien Power Matrix": 2.5,
-        "Dark Matter Residue": 60,
-      },
-      in: {
-        "SAM Fluctuator": 12.5,
-        "Power Shard": 7.5,
-        "Superposition Oscillator": 7.5,
-        "Excited Photonic Matter": 60,
-      },
-      machine: "Quantum Encoder",
-    },
-    "Ficsonium Fuel Rod": {
-      out: {
-        "Ficsonium Fuel Rod": 2.5,
-        "Dark Matter Residue": 50,
-      },
-      in: {
-        "Ficsonium": 5,
-        "Electromagnetic Control Rod": 5,
-        "Ficsite Trigon": 100,
-        "Excited Photonic Matter": 50,
-      },
-      machine: "Quantum Encoder",
-    },
     "Neural-Quantum Processor": {
       out: {
         "Neural-Quantum Processor": 3,
@@ -74,6 +37,45 @@ export const data_quantum_encoder_rates: any = {
         "Time Crystal": 10,
         "Dark Matter Crystal": 10,
         "Quartz Crystal": 60,
+        "Excited Photonic Matter": 60,
+      },
+      machine: "Quantum Encoder",
+    },
+    "AI Expansion Server": {
+      out: {
+        "AI Expansion Server": 4,
+        "Dark Matter Residue": 100,
+      },
+      in: {
+        "Magnetic Field Generator": 4,
+        "Neural-Quantum Processor": 4,
+        "Superposition Oscillator": 4,
+        "Excited Photonic Matter": 100,
+      },
+      machine: "Quantum Encoder",
+    },
+    "Ficsonium Fuel Rod": {
+      out: {
+        "Ficsonium Fuel Rod": 2.5,
+        "Dark Matter Residue": 50,
+      },
+      in: {
+        "Ficsonium": 5,
+        "Electromagnetic Control Rod": 5,
+        "Ficsite Trigon": 100,
+        "Excited Photonic Matter": 50,
+      },
+      machine: "Quantum Encoder",
+    },
+    "Alien Power Matrix": {
+      out: {
+        "Alien Power Matrix": 2.5,
+        "Dark Matter Residue": 60,
+      },
+      in: {
+        "SAM Fluctuator": 12.5,
+        "Power Shard": 7.5,
+        "Superposition Oscillator": 7.5,
         "Excited Photonic Matter": 60,
       },
       machine: "Quantum Encoder",

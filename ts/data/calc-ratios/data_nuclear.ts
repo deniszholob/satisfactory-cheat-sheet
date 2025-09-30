@@ -1,8 +1,11 @@
-export const data_nuclear_rates: any = {
+import { Data } from "../data.model";
+
+export const data_nuclear_rates: Data = {
   recipes: {
     "Uranium Waste": {
       out: {
         "Uranium Waste": 10,
+        "ENERGY": 2500,
       },
       in: {
         "Uranium Fuel Rod": 0.2,
@@ -13,9 +16,20 @@ export const data_nuclear_rates: any = {
     "Plutonium Waste": {
       out: {
         "Plutonium Waste": 1,
+        "ENERGY": 2500,
       },
       in: {
         "Plutonium Fuel Rod": 0.1,
+        "Water": 240,
+      },
+      machine: "Nuclear Power Plant",
+    },
+    "Ficsonium Energy": {
+      out: {
+        "ENERGY": 2500,
+      },
+      in: {
+        "Ficsonium Fuel Rod": 1,
         "Water": 240,
       },
       machine: "Nuclear Power Plant",

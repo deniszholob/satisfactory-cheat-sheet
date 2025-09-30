@@ -2,6 +2,7 @@ export const data_common_ratios = {
   "Ratios": [
     {
       "link": "https://kirkmcdonald.github.io/satisfactory-calculator/calc.html#tab=totals&items=screw:f:1,iron-rod:f:1,iron-plate:f:1",
+      "trueRatio": false,
       "productionItems": [
         {
           "name": "Iron Ore",
@@ -26,12 +27,13 @@ export const data_common_ratios = {
         {
           "name": "Screw",
           "machine": "Constructor",
-          "count": 1.5
+          "count": 1,//1.5
         },
       ]
     },
     {
       "link": "https://kirkmcdonald.github.io/satisfactory-calculator/calc.html#tab=totals&items=cable:f:1,wire:f:1,copper_sheet:f:1",
+      "trueRatio": false,
       "productionItems": [
         {
           "name": "Copper Ore",
@@ -46,7 +48,7 @@ export const data_common_ratios = {
         {
           "name": "Copper Sheet",
           "machine": "Constructor",
-          "count": 1.5
+          "count": 1 // 1.5
         },
         {
           "name": "Wire",
@@ -102,21 +104,22 @@ export const data_common_ratios = {
     },
     {
       "link": "https://kirkmcdonald.github.io/satisfactory-calculator/calc.html#tab=totals&items=reinforced-iron-plate:f:1,rotor:f:1",
+      "trueRatio": false,
       "productionItems": [
         {
           "name": "Iron Ore",
           "machine": "Miner MK1",
-          "count": 1.75 // 3.5/2 = 1.75
+          "count": 2 // 3.5/2 = 1.75
         },
         {
           "name": "Iron Ingot",
           "machine": "Smelter",
-          "count": 3.5 // 1.5p/1 + 4r/2 = 1.5+2 = 3.5
+          "count": 4 // 1.5p/1 + 4r/2 = 1.5+2 = 3.5
         },
         {
           "name": "Iron Plate",
           "machine": "Constructor",
-          "count": 1.5 // 3/2 = 1.5
+          "count": 2 // 3/2 = 1.5
         },
         {
           "name": "Iron Rod",
@@ -156,16 +159,17 @@ export const data_common_ratios = {
     },
     {
       "link": "https://kirkmcdonald.github.io/satisfactory-calculator/calc.html#tab=totals&items=steel-beam:f:3,steel-pipe:f:3",
+      "trueRatio": false,
       "productionItems": [
         {
           "name": "Coal",
           "machine": "Miner MK1",
-          "count": 4.5
+          "count": 4 // 4.5
         },
         {
           "name": "Iron Ore",
           "machine": "Miner MK1",
-          "count": 4.5
+          "count": 4 // 4.5
         },
         {
           "name": "Steel Ingot",
@@ -311,5 +315,4 @@ export const data_common_ratios = {
       ]
     },
   ],
-
 };

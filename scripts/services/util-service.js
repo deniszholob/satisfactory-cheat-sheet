@@ -1,4 +1,5 @@
 import { iconUrlMap, localIconUrlMap } from "../icon_url_map.js";
+import { formatNumberWithSuffix } from "../util/number-format-suffix/number-format.js";
 const sf_calc_icons = [
 // "Copper Sheet",
 // "Solid Biofuel",
@@ -56,7 +57,7 @@ export class UtilService {
             })?.[1] || "");
         }
         // return "https://kirkmcdonald.github.io/satisfactory-calculator/images/" + name + ".png";
-        return `https://raw.githubusercontent.com/KirkMcDonald/satisfactory-calculator/refs/heads/master/images/` + name + ".png";
+        return (`https://raw.githubusercontent.com/KirkMcDonald/satisfactory-calculator/refs/heads/master/images/` + name + ".png");
     }
     /**
      * <img src="url" alt="name" title="name">
@@ -85,7 +86,7 @@ export class UtilService {
         return name;
     }
     /**
-     *
+     * Composite icon
      * @param {String} product
      * @param {String} machine
      */
@@ -94,14 +95,18 @@ export class UtilService {
         elDivIcon.classList.value = "icon-composite";
         const elImgBg = this.getSfIcon(machine);
         elImgBg.classList.value = "icon icon-bg";
+        elDivIcon.appendChild(elImgBg);
         const elImgFg = this.getSfIcon(product);
         elImgFg.classList.value = "icon icon-fg";
-        const elSpan = document.createElement("span");
-        elSpan.appendChild(document.createTextNode(count.toString()));
-        elSpan.classList.value = "icon-text";
-        elDivIcon.appendChild(elImgBg);
         elDivIcon.appendChild(elImgFg);
-        elDivIcon.appendChild(elSpan);
+        if (count != null) {
+            const elSpan = document.createElement("span");
+            const formattedCount = formatNumberWithSuffix(count);
+            elSpan.appendChild(document.createTextNode(formattedCount.text));
+            elSpan.title = formattedCount.title;
+            elSpan.classList.value = "icon-text";
+            elDivIcon.appendChild(elSpan);
+        }
         return elDivIcon;
     }
 }

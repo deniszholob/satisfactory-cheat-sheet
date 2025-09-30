@@ -1,6 +1,7 @@
 import { iconUrlMap, localIconUrlMap } from "../icon_url_map.js";
+import { formatNumberWithSuffix } from "../util/number-format-suffix/number-format.js";
 
-const sf_calc_icons:string[] = [
+const sf_calc_icons: string[] = [
   // "Copper Sheet",
   // "Solid Biofuel",
   // "Non Fissile Uranium",
@@ -37,8 +38,7 @@ export class UtilService {
   }
 
   static getKirkLink(item: string, count: number): string {
-    return `https://kirkmcdonald.github.io/satisfactory-calculator/calc.html#tab=totals&items=${
-      item
+    return `https://kirkmcdonald.github.io/satisfactory-calculator/calc.html#tab=totals&items=${item
       .replace(/[_ ]/g, "-")
       .toLowerCase()}:f:${count}`;
   }
@@ -64,7 +64,9 @@ export class UtilService {
       );
     }
     // return "https://kirkmcdonald.github.io/satisfactory-calculator/images/" + name + ".png";
-    return `https://raw.githubusercontent.com/KirkMcDonald/satisfactory-calculator/refs/heads/master/images/` + name + ".png";
+    return (
+      `https://raw.githubusercontent.com/KirkMcDonald/satisfactory-calculator/refs/heads/master/images/` + name + ".png"
+    );
   }
 
   /**
@@ -96,24 +98,33 @@ export class UtilService {
   }
 
   /**
-   *
+   * Composite icon
    * @param {String} product
    * @param {String} machine
    */
-  static getSfIconProductionItem(product: string, machine: string, count: number): HTMLDivElement {
+  static getSfIconProductionItem(product: string, machine: string, count?: number): HTMLDivElement {
     const elDivIcon: HTMLDivElement = document.createElement("div");
     elDivIcon.classList.value = "icon-composite";
+
     const elImgBg: HTMLImageElement = this.getSfIcon(machine);
     elImgBg.classList.value = "icon icon-bg";
+    elDivIcon.appendChild(elImgBg);
+
     const elImgFg: HTMLImageElement = this.getSfIcon(product);
     elImgFg.classList.value = "icon icon-fg";
-    const elSpan: HTMLSpanElement = document.createElement("span");
-    elSpan.appendChild(document.createTextNode(count.toString()));
-    elSpan.classList.value = "icon-text";
-
-    elDivIcon.appendChild(elImgBg);
     elDivIcon.appendChild(elImgFg);
-    elDivIcon.appendChild(elSpan);
+
+    if (count != null) {
+      const elSpan: HTMLSpanElement = document.createElement("span");
+      const formattedCount: {
+        text: string;
+        title: string;
+      } = formatNumberWithSuffix(count);
+      elSpan.appendChild(document.createTextNode(formattedCount.text));
+      elSpan.title = formattedCount.title;
+      elSpan.classList.value = "icon-text";
+      elDivIcon.appendChild(elSpan);
+    }
 
     return elDivIcon;
   }

@@ -252,6 +252,10 @@ img.icon {
   margin: 0 6px;
   border-radius: 2px;
 }
+.icon-composite.sm {
+  height: 48px;
+  width: 48px;
+}
 
 .icon-composite .icon-bg {
   height: 100%;
@@ -260,8 +264,8 @@ img.icon {
 }
 
 .icon-composite .icon-fg {
-  height: 36px;
-  width: 36px;
+  height: 56.25%;
+  width: 56.25%;
   position: absolute;
   left: 0;
   top: 0;
@@ -365,4 +369,19 @@ img.icon {
 
 .full-width {
   width: 100%;
+}
+
+.sticky-left-panel {
+  position: fixed;
+  left: 0;
+  top: 50%;
+  --tw-translate-y: -50%;
+  transform: translate(var(--tw-translate-x, 0), var(--tw-translate-y));
+  background: rgba(0, 0, 0, 0.8);
+  writing-mode: sideways-rl;
+  text-orientation: mixed;
+
+  .btn {
+    padding: 0.5rem 0.25rem;
+  }
 }
